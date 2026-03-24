@@ -1,0 +1,131 @@
+[
+    {
+        "label": "sqlite3",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sqlite3",
+        "description": "sqlite3",
+        "detail": "sqlite3",
+        "documentation": {}
+    },
+    {
+        "label": "QWidget",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QVBoxLayout",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QLabel",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "random",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "random",
+        "description": "random",
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "QtCore",
+        "importPath": "PySide6",
+        "description": "PySide6",
+        "isExtraImport": true,
+        "detail": "PySide6",
+        "documentation": {}
+    },
+    {
+        "label": "QtGui",
+        "importPath": "PySide6",
+        "description": "PySide6",
+        "isExtraImport": true,
+        "detail": "PySide6",
+        "documentation": {}
+    },
+    {
+        "label": "QtWidgets",
+        "importPath": "PySide6",
+        "description": "PySide6",
+        "isExtraImport": true,
+        "detail": "PySide6",
+        "documentation": {}
+    },
+    {
+        "label": "PySide6.QtCore",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "PySide6.QtCore",
+        "description": "PySide6.QtCore",
+        "detail": "PySide6.QtCore",
+        "documentation": {}
+    },
+    {
+        "label": "get_connection",
+        "kind": 2,
+        "importPath": "env.database.db",
+        "description": "env.database.db",
+        "peekOfCode": "def get_connection():\n    return sqlite3.connect(DB_NAME)\ndef initialize_database():\n    conn = get_connection()\n    cursor = conn.cursor()\n    cursor.execute(\n        \"\"\"\n        CREATE TABLE IF NOT EXISTS properties (\n            id INTEGER PRIMARY KEY AUTOINCREMENT,\n            customer_name TEXT NOT NULL,",
+        "detail": "env.database.db",
+        "documentation": {}
+    },
+    {
+        "label": "initialize_database",
+        "kind": 2,
+        "importPath": "env.database.db",
+        "description": "env.database.db",
+        "peekOfCode": "def initialize_database():\n    conn = get_connection()\n    cursor = conn.cursor()\n    cursor.execute(\n        \"\"\"\n        CREATE TABLE IF NOT EXISTS properties (\n            id INTEGER PRIMARY KEY AUTOINCREMENT,\n            customer_name TEXT NOT NULL,\n            item_name TEXT NOT NULL,\n            rental_date TEXT NOT NULL,",
+        "detail": "env.database.db",
+        "documentation": {}
+    },
+    {
+        "label": "DB_NAME",
+        "kind": 5,
+        "importPath": "env.database.db",
+        "description": "env.database.db",
+        "peekOfCode": "DB_NAME = \"rent_management.db\"\ndef get_connection():\n    return sqlite3.connect(DB_NAME)\ndef initialize_database():\n    conn = get_connection()\n    cursor = conn.cursor()\n    cursor.execute(\n        \"\"\"\n        CREATE TABLE IF NOT EXISTS properties (\n            id INTEGER PRIMARY KEY AUTOINCREMENT,",
+        "detail": "env.database.db",
+        "documentation": {}
+    },
+    {
+        "label": "Dashboard",
+        "kind": 6,
+        "importPath": "env.ui.dashboard",
+        "description": "env.ui.dashboard",
+        "peekOfCode": "class Dashboard(QWidget):\n    def __init__(self):\n        super().__init__()\n        layout = QVBoxLayout()\n        title = QLabel(\"Rent Management Dashboard\")\n        title.setStyleSheet(\"font-size: 24px; font-weight: bold;\")\n        stats = QLabel(\n                \"Welcome!\\n\\n\"\n                \"• Total Properties: --\\n\"\n                \"• Occupied Units: --\\n\"",
+        "detail": "env.ui.dashboard",
+        "documentation": {}
+    },
+    {
+        "label": "MyWidget",
+        "kind": 6,
+        "importPath": "env.ui.main_window",
+        "description": "env.ui.main_window",
+        "peekOfCode": "class MyWidget(QtWidgets.QWidget):\n    def __init__(self):\n        super().__init__()\n        self.hello = [\"Hallo Welt\", \"Hei maailma\", \"Hola Mundo\", \"Привет мир\"]\n        self.Button = QtWidgets.QPushButton(\"Click me!\", self)\n        self.text =  QtWidgets.QLabel(\"RENTO\",alignment=QtCore.Qt.AlignCenter)\n        self.layout = QtWidgets.QVBoxLayout(self)\n        self.layout.addWidget(self.text)\n        self.layout.addWidget(self.Button)\n        self.Button.clicked.connect(self.magic)",
+        "detail": "env.ui.main_window",
+        "documentation": {}
+    }
+]
