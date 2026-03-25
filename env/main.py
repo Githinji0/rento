@@ -38,3 +38,41 @@ class MainWindow(QMainWindow):
         ]:
             btn.setFixedHeight(40)
             sidebar.addWidget(btn)
+
+        sidebar.addStretch()
+        # ===== Content Area =====
+        self.stack = QStackedWidget()
+
+        self.dashboard_page = Dashboard()
+        self.stack.addWidget(self.dashboard_page)
+
+        # Placeholder pages
+        self.stack.addWidget(QLabel("Properties Page"))
+        self.stack.addWidget(QLabel("Units Page"))
+        self.stack.addWidget(QLabel("Tenants Page"))
+        self.stack.addWidget(QLabel("Payments Page"))
+        self.stack.addWidget(QLabel("Reports Page"))
+
+        # ===== Navigation Logic =====
+        btn_dashboard.clicked.connect(lambda: self.stack.setCurrentIndex(0))
+        btn_properties.clicked.connect(lambda: self.stack.setCurrentIndex(1))
+        btn_units.clicked.connect(lambda: self.stack.setCurrentIndex(2))
+        btn_tenants.clicked.connect(lambda: self.stack.setCurrentIndex(3))
+        btn_payments.clicked.connect(lambda: self.stack.setCurrentIndex(4))
+        btn_reports.clicked.connect(lambda: self.stack.setCurrentIndex(5))
+
+        # Add layouts
+        main_layout.addLayout(sidebar, 1)
+        main_layout.addWidget(self.stack, 4)
+
+        main_widget.setLayout(main_layout)
+        self.setCentralWidget(main_widget)
+
+
+if __name__ == "__main__":
+    initialize_database()
+
+    app = QApplication(sys.argv)
+    window = MainWindow()
+    window.show()
+    sys.exit(app.exec())
