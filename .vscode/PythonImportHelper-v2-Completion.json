@@ -33,6 +33,70 @@
         "documentation": {}
     },
     {
+        "label": "QApplication",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QMainWindow",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QWidget",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QHBoxLayout",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QVBoxLayout",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QPushButton",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QLabel",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QStackedWidget",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
         "label": "sys",
         "kind": 6,
         "isExtraImport": true,
@@ -75,12 +139,19 @@
         "documentation": {}
     },
     {
-        "label": "PySide6.QtCore",
-        "kind": 6,
+        "label": "Dashboard",
+        "importPath": "env.ui.dashboard",
+        "description": "env.ui.dashboard",
         "isExtraImport": true,
-        "importPath": "PySide6.QtCore",
-        "description": "PySide6.QtCore",
-        "detail": "PySide6.QtCore",
+        "detail": "env.ui.dashboard",
+        "documentation": {}
+    },
+    {
+        "label": "initialize_database",
+        "importPath": "env.database.db",
+        "description": "env.database.db",
+        "isExtraImport": true,
+        "detail": "env.database.db",
         "documentation": {}
     },
     {
@@ -126,6 +197,15 @@
         "description": "env.ui.main_window",
         "peekOfCode": "class MyWidget(QtWidgets.QWidget):\n    def __init__(self):\n        super().__init__()\n        self.hello = [\"Hallo Welt\", \"Hei maailma\", \"Hola Mundo\", \"Привет мир\"]\n        self.Button = QtWidgets.QPushButton(\"Click me!\", self)\n        self.text =  QtWidgets.QLabel(\"RENTO\",alignment=QtCore.Qt.AlignCenter)\n        self.layout = QtWidgets.QVBoxLayout(self)\n        self.layout.addWidget(self.text)\n        self.layout.addWidget(self.Button)\n        self.Button.clicked.connect(self.magic)",
         "detail": "env.ui.main_window",
+        "documentation": {}
+    },
+    {
+        "label": "MainWindow",
+        "kind": 6,
+        "importPath": "env.main",
+        "description": "env.main",
+        "peekOfCode": "class MainWindow(QMainWindow):\n    def __init__(self):\n        super().__init__()\n        self.setWindowTitle(\"Rent Management System\")\n        self.resize(800, 600)\n        main_widget = QWidget()\n        main_layout = QHBoxLayout()\n        sidebar = QVBoxLayout()\n        btn_dashboard = QPushButton(\"Dashboard\")\n        btn_properties = QPushButton(\"Properties\")",
+        "detail": "env.main",
         "documentation": {}
     }
 ]
