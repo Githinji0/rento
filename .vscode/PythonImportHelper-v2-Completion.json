@@ -140,18 +140,18 @@
     },
     {
         "label": "Dashboard",
-        "importPath": "env.ui.dashboard",
-        "description": "env.ui.dashboard",
+        "importPath": "ui.dashboard",
+        "description": "ui.dashboard",
         "isExtraImport": true,
-        "detail": "env.ui.dashboard",
+        "detail": "ui.dashboard",
         "documentation": {}
     },
     {
         "label": "initialize_database",
-        "importPath": "env.database.db",
-        "description": "env.database.db",
+        "importPath": "database.db",
+        "description": "database.db",
         "isExtraImport": true,
-        "detail": "env.database.db",
+        "detail": "database.db",
         "documentation": {}
     },
     {

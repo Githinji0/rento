@@ -4,8 +4,8 @@ from PySide6.QtWidgets import (
     QHBoxLayout, QVBoxLayout, QPushButton,
     QLabel, QStackedWidget
 )
-from env.ui.dashboard import Dashboard
-from env.database.db import initialize_database
+from ui.dashboard import Dashboard
+from database.db import initialize_database
 
 class MainWindow(QMainWindow):
     def __init__(self):

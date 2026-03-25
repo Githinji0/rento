@@ -38,7 +38,7 @@ def initialize_database():
         email TEXT,
         unit_id INTEGER,
         move_in DATE,
-        deposit REAL,
+        deposit REAL
 
         
     )
