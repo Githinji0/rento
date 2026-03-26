@@ -55,10 +55,10 @@ class PropertiesPage(QWidget):
         # ===== Buttons =====
         btn_layout = QHBoxLayout()
 
-        self.add_btn = QPushButton("➕ Add")
-        self.update_btn = QPushButton("✏️ Update")
-        self.delete_btn = QPushButton("🗑️ Delete")
-        self.clear_btn = QPushButton("🔄 Clear")
+        self.add_btn = QPushButton("Add")
+        self.update_btn = QPushButton("Update")
+        self.delete_btn = QPushButton("Delete")
+        self.clear_btn = QPushButton("Clear")
 
         btn_layout.addWidget(self.add_btn)
         btn_layout.addWidget(self.update_btn)
