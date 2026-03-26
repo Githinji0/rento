@@ -1,11 +1,82 @@
 [
     {
-        "label": "sqlite3",
-        "kind": 6,
+        "label": "QWidget",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
         "isExtraImport": true,
-        "importPath": "sqlite3",
-        "description": "sqlite3",
-        "detail": "sqlite3",
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QVBoxLayout",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QHBoxLayout",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QPushButton",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QTableWidget",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QTableWidgetItem",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QLineEdit",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QTextEdit",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QLabel",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QMessageBox",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
         "documentation": {}
     },
     {
@@ -97,6 +168,55 @@
         "documentation": {}
     },
     {
+        "label": "get_properties",
+        "importPath": "database.db",
+        "description": "database.db",
+        "isExtraImport": true,
+        "detail": "database.db",
+        "documentation": {}
+    },
+    {
+        "label": "add_property",
+        "importPath": "database.db",
+        "description": "database.db",
+        "isExtraImport": true,
+        "detail": "database.db",
+        "documentation": {}
+    },
+    {
+        "label": "update_property",
+        "importPath": "database.db",
+        "description": "database.db",
+        "isExtraImport": true,
+        "detail": "database.db",
+        "documentation": {}
+    },
+    {
+        "label": "delete_property",
+        "importPath": "database.db",
+        "description": "database.db",
+        "isExtraImport": true,
+        "detail": "database.db",
+        "documentation": {}
+    },
+    {
+        "label": "initialize_database",
+        "importPath": "database.db",
+        "description": "database.db",
+        "isExtraImport": true,
+        "detail": "database.db",
+        "documentation": {}
+    },
+    {
+        "label": "sqlite3",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sqlite3",
+        "description": "sqlite3",
+        "detail": "sqlite3",
+        "documentation": {}
+    },
+    {
         "label": "sys",
         "kind": 6,
         "isExtraImport": true,
@@ -147,11 +267,20 @@
         "documentation": {}
     },
     {
-        "label": "initialize_database",
-        "importPath": "database.db",
-        "description": "database.db",
+        "label": "PropertiesPage",
+        "importPath": "core.properties",
+        "description": "core.properties",
         "isExtraImport": true,
-        "detail": "database.db",
+        "detail": "core.properties",
+        "documentation": {}
+    },
+    {
+        "label": "PropertiesPage",
+        "kind": 6,
+        "importPath": "env.core.properties",
+        "description": "env.core.properties",
+        "peekOfCode": "class PropertiesPage(QWidget):\n    def __init__(self):\n        super().__init__()\n        layout = QVBoxLayout()\n        # ===== Title =====\n        title = QLabel(\"🏢 Properties Management\")\n        title.setStyleSheet(\"font-size: 20px; font-weight: bold;\")\n        layout.addWidget(title)\n        # ===== Table =====\n        self.table = QTableWidget()",
+        "detail": "env.core.properties",
         "documentation": {}
     },
     {
@@ -169,6 +298,42 @@
         "importPath": "env.database.db",
         "description": "env.database.db",
         "peekOfCode": "def initialize_database():\n    conn = get_connection()\n    cursor = conn.cursor()\n    cursor.execute(\n        \"\"\"\n        CREATE TABLE IF NOT EXISTS properties (\n            id INTEGER PRIMARY KEY AUTOINCREMENT,\n            customer_name TEXT NOT NULL,\n            item_name TEXT NOT NULL,\n            rental_date TEXT NOT NULL,",
+        "detail": "env.database.db",
+        "documentation": {}
+    },
+    {
+        "label": "get_properties",
+        "kind": 2,
+        "importPath": "env.database.db",
+        "description": "env.database.db",
+        "peekOfCode": "def get_properties():\n    conn = get_connection()\n    cursor = conn.cursor()\n    cursor.execute(\"SELECT * FROM properties\")\n    data = cursor.fetchall()\n    conn.close()\n    return data\ndef add_property(name, address, description):\n    conn = get_connection()\n    cursor = conn.cursor()",
+        "detail": "env.database.db",
+        "documentation": {}
+    },
+    {
+        "label": "add_property",
+        "kind": 2,
+        "importPath": "env.database.db",
+        "description": "env.database.db",
+        "peekOfCode": "def add_property(name, address, description):\n    conn = get_connection()\n    cursor = conn.cursor()\n    cursor.execute(\n        \"INSERT INTO properties (name, address, description) VALUES (?, ?, ?)\",\n        (name, address, description),\n    )\n    conn.commit()\n    conn.close()\ndef update_property(prop_id, name, address, description):",
+        "detail": "env.database.db",
+        "documentation": {}
+    },
+    {
+        "label": "update_property",
+        "kind": 2,
+        "importPath": "env.database.db",
+        "description": "env.database.db",
+        "peekOfCode": "def update_property(prop_id, name, address, description):\n    conn = get_connection()\n    cursor = conn.cursor()\n    cursor.execute(\n        \"\"\"UPDATE properties\n           SET name=?, address=?, description=?\n           WHERE id=?\"\"\",\n        (name, address, description, prop_id),\n    )\n    conn.commit()",
+        "detail": "env.database.db",
+        "documentation": {}
+    },
+    {
+        "label": "delete_property",
+        "kind": 2,
+        "importPath": "env.database.db",
+        "description": "env.database.db",
+        "peekOfCode": "def delete_property(prop_id):\n    conn = get_connection()\n    cursor = conn.cursor()\n    cursor.execute(\"DELETE FROM properties WHERE id=?\", (prop_id,))\n    conn.commit()\n    conn.close()",
         "detail": "env.database.db",
         "documentation": {}
     },

@@ -55,3 +55,47 @@ def initialize_database():
     """)
     conn.commit()
     conn.close()
+
+
+
+# ===== PROPERTY OPERATIONS =====
+
+def get_properties():
+    conn = get_connection()
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM properties")
+    data = cursor.fetchall()
+    conn.close()
+    return data
+
+
+def add_property(name, address, description):
+    conn = get_connection()
+    cursor = conn.cursor()
+    cursor.execute(
+        "INSERT INTO properties (name, address, description) VALUES (?, ?, ?)",
+        (name, address, description),
+    )
+    conn.commit()
+    conn.close()
+
+
+def update_property(prop_id, name, address, description):
+    conn = get_connection()
+    cursor = conn.cursor()
+    cursor.execute(
+        """UPDATE properties
+           SET name=?, address=?, description=?
+           WHERE id=?""",
+        (name, address, description, prop_id),
+    )
+    conn.commit()
+    conn.close()
+
+
+def delete_property(prop_id):
+    conn = get_connection()
+    cursor = conn.cursor()
+    cursor.execute("DELETE FROM properties WHERE id=?", (prop_id,))
+    conn.commit()
+    conn.close()
