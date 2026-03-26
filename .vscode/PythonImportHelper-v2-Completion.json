@@ -96,6 +96,86 @@
         "documentation": {}
     },
     {
+        "label": "QHBoxLayout",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QPushButton",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QTableWidget",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QTableWidgetItem",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QLineEdit",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QLabel",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QMessageBox",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QComboBox",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QWidget",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QVBoxLayout",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
         "label": "QLabel",
         "importPath": "PySide6.QtWidgets",
         "description": "PySide6.QtWidgets",
@@ -200,6 +280,46 @@
         "documentation": {}
     },
     {
+        "label": "get_units",
+        "importPath": "database.db",
+        "description": "database.db",
+        "isExtraImport": true,
+        "detail": "database.db",
+        "documentation": {}
+    },
+    {
+        "label": "add_unit",
+        "importPath": "database.db",
+        "description": "database.db",
+        "isExtraImport": true,
+        "detail": "database.db",
+        "documentation": {}
+    },
+    {
+        "label": "update_unit",
+        "importPath": "database.db",
+        "description": "database.db",
+        "isExtraImport": true,
+        "detail": "database.db",
+        "documentation": {}
+    },
+    {
+        "label": "delete_unit",
+        "importPath": "database.db",
+        "description": "database.db",
+        "isExtraImport": true,
+        "detail": "database.db",
+        "documentation": {}
+    },
+    {
+        "label": "get_property_list",
+        "importPath": "database.db",
+        "description": "database.db",
+        "isExtraImport": true,
+        "detail": "database.db",
+        "documentation": {}
+    },
+    {
         "label": "initialize_database",
         "importPath": "database.db",
         "description": "database.db",
@@ -275,12 +395,29 @@
         "documentation": {}
     },
     {
+        "label": "UnitsPage",
+        "importPath": "core.units",
+        "description": "core.units",
+        "isExtraImport": true,
+        "detail": "core.units",
+        "documentation": {}
+    },
+    {
         "label": "PropertiesPage",
         "kind": 6,
         "importPath": "env.core.properties",
         "description": "env.core.properties",
         "peekOfCode": "class PropertiesPage(QWidget):\n    def __init__(self):\n        super().__init__()\n        layout = QVBoxLayout()\n        # ===== Title =====\n        title = QLabel(\"🏢 Properties Management\")\n        title.setStyleSheet(\"font-size: 20px; font-weight: bold;\")\n        layout.addWidget(title)\n        # ===== Table =====\n        self.table = QTableWidget()",
         "detail": "env.core.properties",
+        "documentation": {}
+    },
+    {
+        "label": "UnitsPage",
+        "kind": 6,
+        "importPath": "env.core.units",
+        "description": "env.core.units",
+        "peekOfCode": "class UnitsPage(QWidget):\n    def __init__(self):\n        super().__init__()\n        layout = QVBoxLayout()\n        # ===== Title =====\n        title = QLabel(\" Units Management\")\n        title.setStyleSheet(\"font-size: 20px; font-weight: bold;\")\n        layout.addWidget(title)\n        # ===== Table =====\n        self.table = QTableWidget()",
+        "detail": "env.core.units",
         "documentation": {}
     },
     {
@@ -333,7 +470,97 @@
         "kind": 2,
         "importPath": "env.database.db",
         "description": "env.database.db",
-        "peekOfCode": "def delete_property(prop_id):\n    conn = get_connection()\n    cursor = conn.cursor()\n    cursor.execute(\"DELETE FROM properties WHERE id=?\", (prop_id,))\n    conn.commit()\n    conn.close()",
+        "peekOfCode": "def delete_property(prop_id):\n    conn = get_connection()\n    cursor = conn.cursor()\n    cursor.execute(\"DELETE FROM properties WHERE id=?\", (prop_id,))\n    conn.commit()\n    conn.close()\n# ===== UNIT OPERATIONS =====\ndef get_units():\n    conn = get_connection()\n    cursor = conn.cursor()",
+        "detail": "env.database.db",
+        "documentation": {}
+    },
+    {
+        "label": "get_units",
+        "kind": 2,
+        "importPath": "env.database.db",
+        "description": "env.database.db",
+        "peekOfCode": "def get_units():\n    conn = get_connection()\n    cursor = conn.cursor()\n    cursor.execute(\"\"\"\n        SELECT units.id, properties.name, unit_number,\n               rent_amount, status\n        FROM units\n        LEFT JOIN properties\n        ON units.property_id = properties.id\n    \"\"\")",
+        "detail": "env.database.db",
+        "documentation": {}
+    },
+    {
+        "label": "add_unit",
+        "kind": 2,
+        "importPath": "env.database.db",
+        "description": "env.database.db",
+        "peekOfCode": "def add_unit(property_id, unit_number, rent_amount, status):\n    conn = get_connection()\n    cursor = conn.cursor()\n    cursor.execute(\n        \"\"\"INSERT INTO units\n           (property_id, unit_number, rent_amount, status)\n           VALUES (?, ?, ?, ?)\"\"\",\n        (property_id, unit_number, rent_amount, status),\n    )\n    conn.commit()",
+        "detail": "env.database.db",
+        "documentation": {}
+    },
+    {
+        "label": "update_unit",
+        "kind": 2,
+        "importPath": "env.database.db",
+        "description": "env.database.db",
+        "peekOfCode": "def update_unit(unit_id, property_id, unit_number, rent_amount, status):\n    conn = get_connection()\n    cursor = conn.cursor()\n    cursor.execute(\n        \"\"\"UPDATE units\n           SET property_id=?, unit_number=?,\n               rent_amount=?, status=?\n           WHERE id=?\"\"\",\n        (property_id, unit_number, rent_amount, status, unit_id),\n    )",
+        "detail": "env.database.db",
+        "documentation": {}
+    },
+    {
+        "label": "delete_unit",
+        "kind": 2,
+        "importPath": "env.database.db",
+        "description": "env.database.db",
+        "peekOfCode": "def delete_unit(unit_id):\n    conn = get_connection()\n    cursor = conn.cursor()\n    cursor.execute(\"DELETE FROM units WHERE id=?\", (unit_id,))\n    conn.commit()\n    conn.close()\ndef get_property_list():\n    conn = get_connection()\n    cursor = conn.cursor()\n    cursor.execute(\"SELECT id, name FROM properties\")",
+        "detail": "env.database.db",
+        "documentation": {}
+    },
+    {
+        "label": "get_property_list",
+        "kind": 2,
+        "importPath": "env.database.db",
+        "description": "env.database.db",
+        "peekOfCode": "def get_property_list():\n    conn = get_connection()\n    cursor = conn.cursor()\n    cursor.execute(\"SELECT id, name FROM properties\")\n    data = cursor.fetchall()\n    conn.close()\n    return data\n# ===== TENANT OPERATIONS =====\ndef get_tenants():\n    conn = get_connection()",
+        "detail": "env.database.db",
+        "documentation": {}
+    },
+    {
+        "label": "get_tenants",
+        "kind": 2,
+        "importPath": "env.database.db",
+        "description": "env.database.db",
+        "peekOfCode": "def get_tenants():\n    conn = get_connection()\n    cursor = conn.cursor()\n    cursor.execute(\"\"\"\n        SELECT tenants.id, tenants.name,\n               tenants.phone, tenants.email,\n               units.unit_number,\n               tenants.move_in,\n               tenants.deposit\n        FROM tenants",
+        "detail": "env.database.db",
+        "documentation": {}
+    },
+    {
+        "label": "add_tenant",
+        "kind": 2,
+        "importPath": "env.database.db",
+        "description": "env.database.db",
+        "peekOfCode": "def add_tenant(name, phone, email, unit_id, move_in, deposit):\n    conn = get_connection()\n    cursor = conn.cursor()\n    cursor.execute(\n        \"\"\"INSERT INTO tenants\n           (name, phone, email, unit_id, move_in, deposit)\n           VALUES (?, ?, ?, ?, ?, ?)\"\"\",\n        (name, phone, email, unit_id, move_in, deposit),\n    )\n    conn.commit()",
+        "detail": "env.database.db",
+        "documentation": {}
+    },
+    {
+        "label": "update_tenant",
+        "kind": 2,
+        "importPath": "env.database.db",
+        "description": "env.database.db",
+        "peekOfCode": "def update_tenant(tenant_id, name, phone, email, unit_id, move_in, deposit):\n    conn = get_connection()\n    cursor = conn.cursor()\n    cursor.execute(\n        \"\"\"UPDATE tenants\n           SET name=?, phone=?, email=?,\n               unit_id=?, move_in=?, deposit=?\n           WHERE id=?\"\"\",\n        (name, phone, email, unit_id, move_in, deposit, tenant_id),\n    )",
+        "detail": "env.database.db",
+        "documentation": {}
+    },
+    {
+        "label": "delete_tenant",
+        "kind": 2,
+        "importPath": "env.database.db",
+        "description": "env.database.db",
+        "peekOfCode": "def delete_tenant(tenant_id):\n    conn = get_connection()\n    cursor = conn.cursor()\n    cursor.execute(\"DELETE FROM tenants WHERE id=?\", (tenant_id,))\n    conn.commit()\n    conn.close()\ndef get_unit_list():\n    conn = get_connection()\n    cursor = conn.cursor()\n    cursor.execute(\"\"\"",
+        "detail": "env.database.db",
+        "documentation": {}
+    },
+    {
+        "label": "get_unit_list",
+        "kind": 2,
+        "importPath": "env.database.db",
+        "description": "env.database.db",
+        "peekOfCode": "def get_unit_list():\n    conn = get_connection()\n    cursor = conn.cursor()\n    cursor.execute(\"\"\"\n        SELECT units.id, units.unit_number\n        FROM units\n    \"\"\")\n    data = cursor.fetchall()\n    conn.close()\n    return data",
         "detail": "env.database.db",
         "documentation": {}
     },

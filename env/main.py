@@ -7,6 +7,7 @@ from PySide6.QtWidgets import (
 from ui.dashboard import Dashboard
 from database.db import initialize_database
 from core.properties import PropertiesPage
+from core.units import UnitsPage
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -49,7 +50,7 @@ class MainWindow(QMainWindow):
 
         # Placeholder pages
         self.stack.addWidget(PropertiesPage())
-        self.stack.addWidget(QLabel("Units Page"))
+        self.stack.addWidget(UnitsPage())
         self.stack.addWidget(QLabel("Tenants Page"))
         self.stack.addWidget(QLabel("Payments Page"))
         self.stack.addWidget(QLabel("Reports Page"))
