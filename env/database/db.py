@@ -7,6 +7,45 @@ DB_NAME = "rent_management.db"
 def get_connection():
     return sqlite3.connect(DB_NAME)
 
+
+def _get_table_columns(cursor, table_name):
+    cursor.execute(f"PRAGMA table_info({table_name})")
+    return [row[1] for row in cursor.fetchall()]
+
+
+def _migrate_properties_schema(cursor):
+    columns = set(_get_table_columns(cursor, "properties"))
+
+    # Older databases may not have the columns used by the current UI.
+    if "name" not in columns:
+        cursor.execute("ALTER TABLE properties ADD COLUMN name TEXT")
+    if "address" not in columns:
+        cursor.execute("ALTER TABLE properties ADD COLUMN address TEXT")
+    if "description" not in columns:
+        cursor.execute("ALTER TABLE properties ADD COLUMN description TEXT")
+
+    columns = set(_get_table_columns(cursor, "properties"))
+
+    if "item_name" in columns:
+        cursor.execute(
+            """
+            UPDATE properties
+            SET name = COALESCE(NULLIF(name, ''), item_name)
+            WHERE name IS NULL OR name = ''
+            """
+        )
+    elif "customer_name" in columns:
+        cursor.execute(
+            """
+            UPDATE properties
+            SET name = COALESCE(NULLIF(name, ''), customer_name)
+            WHERE name IS NULL OR name = ''
+            """
+        )
+
+    cursor.execute("UPDATE properties SET address = '' WHERE address IS NULL")
+    cursor.execute("UPDATE properties SET description = '' WHERE description IS NULL")
+
 def initialize_database():
     conn = get_connection()
     cursor = conn.cursor()
@@ -14,13 +53,13 @@ def initialize_database():
         """
         CREATE TABLE IF NOT EXISTS properties (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
-            customer_name TEXT NOT NULL,
-            item_name TEXT NOT NULL,
-            rental_date TEXT NOT NULL,
-            return_date TEXT
+            name TEXT NOT NULL,
+            address TEXT,
+            description TEXT
         )
         """
     )
+    _migrate_properties_schema(cursor)
     cursor.execute("""
         CREATE TABLE IF NOT EXISTS units (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -63,7 +102,7 @@ def initialize_database():
 def get_properties():
     conn = get_connection()
     cursor = conn.cursor()
-    cursor.execute("SELECT * FROM properties")
+    cursor.execute("SELECT id, name, address, description FROM properties")
     data = cursor.fetchall()
     conn.close()
     return data

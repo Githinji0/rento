@@ -160,6 +160,94 @@
         "documentation": {}
     },
     {
+        "label": "QDateEdit",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QWidget",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QVBoxLayout",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QHBoxLayout",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QPushButton",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QTableWidget",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QTableWidgetItem",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QLineEdit",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QLabel",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QMessageBox",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QComboBox",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
         "label": "QWidget",
         "importPath": "PySide6.QtWidgets",
         "description": "PySide6.QtWidgets",
@@ -280,6 +368,46 @@
         "documentation": {}
     },
     {
+        "label": "get_tenants",
+        "importPath": "database.db",
+        "description": "database.db",
+        "isExtraImport": true,
+        "detail": "database.db",
+        "documentation": {}
+    },
+    {
+        "label": "add_tenant",
+        "importPath": "database.db",
+        "description": "database.db",
+        "isExtraImport": true,
+        "detail": "database.db",
+        "documentation": {}
+    },
+    {
+        "label": "update_tenant",
+        "importPath": "database.db",
+        "description": "database.db",
+        "isExtraImport": true,
+        "detail": "database.db",
+        "documentation": {}
+    },
+    {
+        "label": "delete_tenant",
+        "importPath": "database.db",
+        "description": "database.db",
+        "isExtraImport": true,
+        "detail": "database.db",
+        "documentation": {}
+    },
+    {
+        "label": "get_unit_list",
+        "importPath": "database.db",
+        "description": "database.db",
+        "isExtraImport": true,
+        "detail": "database.db",
+        "documentation": {}
+    },
+    {
         "label": "get_units",
         "importPath": "database.db",
         "description": "database.db",
@@ -325,6 +453,14 @@
         "description": "database.db",
         "isExtraImport": true,
         "detail": "database.db",
+        "documentation": {}
+    },
+    {
+        "label": "QDate",
+        "importPath": "PySide6.QtCore",
+        "description": "PySide6.QtCore",
+        "isExtraImport": true,
+        "detail": "PySide6.QtCore",
         "documentation": {}
     },
     {
@@ -403,12 +539,29 @@
         "documentation": {}
     },
     {
+        "label": "TenantsPage",
+        "importPath": "core.tenants",
+        "description": "core.tenants",
+        "isExtraImport": true,
+        "detail": "core.tenants",
+        "documentation": {}
+    },
+    {
         "label": "PropertiesPage",
         "kind": 6,
         "importPath": "env.core.properties",
         "description": "env.core.properties",
         "peekOfCode": "class PropertiesPage(QWidget):\n    def __init__(self):\n        super().__init__()\n        layout = QVBoxLayout()\n        # ===== Title =====\n        title = QLabel(\"🏢 Properties Management\")\n        title.setStyleSheet(\"font-size: 20px; font-weight: bold;\")\n        layout.addWidget(title)\n        # ===== Table =====\n        self.table = QTableWidget()",
         "detail": "env.core.properties",
+        "documentation": {}
+    },
+    {
+        "label": "TenantsPage",
+        "kind": 6,
+        "importPath": "env.core.tenants",
+        "description": "env.core.tenants",
+        "peekOfCode": "class TenantsPage(QWidget):\n    def __init__(self):\n        super().__init__()\n        layout = QVBoxLayout()\n        # ===== Title =====\n        title = QLabel(\"Tenants Management\")\n        title.setStyleSheet(\"font-size: 20px; font-weight: bold;\")\n        layout.addWidget(title)\n        # ===== Table =====\n        self.table = QTableWidget()",
+        "detail": "env.core.tenants",
         "documentation": {}
     },
     {
@@ -425,7 +578,7 @@
         "kind": 2,
         "importPath": "env.database.db",
         "description": "env.database.db",
-        "peekOfCode": "def get_connection():\n    return sqlite3.connect(DB_NAME)\ndef initialize_database():\n    conn = get_connection()\n    cursor = conn.cursor()\n    cursor.execute(\n        \"\"\"\n        CREATE TABLE IF NOT EXISTS properties (\n            id INTEGER PRIMARY KEY AUTOINCREMENT,\n            customer_name TEXT NOT NULL,",
+        "peekOfCode": "def get_connection():\n    return sqlite3.connect(DB_NAME)\ndef _get_table_columns(cursor, table_name):\n    cursor.execute(f\"PRAGMA table_info({table_name})\")\n    return [row[1] for row in cursor.fetchall()]\ndef _migrate_properties_schema(cursor):\n    columns = set(_get_table_columns(cursor, \"properties\"))\n    # Older databases may not have the columns used by the current UI.\n    if \"name\" not in columns:\n        cursor.execute(\"ALTER TABLE properties ADD COLUMN name TEXT\")",
         "detail": "env.database.db",
         "documentation": {}
     },
@@ -434,7 +587,7 @@
         "kind": 2,
         "importPath": "env.database.db",
         "description": "env.database.db",
-        "peekOfCode": "def initialize_database():\n    conn = get_connection()\n    cursor = conn.cursor()\n    cursor.execute(\n        \"\"\"\n        CREATE TABLE IF NOT EXISTS properties (\n            id INTEGER PRIMARY KEY AUTOINCREMENT,\n            customer_name TEXT NOT NULL,\n            item_name TEXT NOT NULL,\n            rental_date TEXT NOT NULL,",
+        "peekOfCode": "def initialize_database():\n    conn = get_connection()\n    cursor = conn.cursor()\n    cursor.execute(\n        \"\"\"\n        CREATE TABLE IF NOT EXISTS properties (\n            id INTEGER PRIMARY KEY AUTOINCREMENT,\n            name TEXT NOT NULL,\n            address TEXT,\n            description TEXT",
         "detail": "env.database.db",
         "documentation": {}
     },
@@ -443,7 +596,7 @@
         "kind": 2,
         "importPath": "env.database.db",
         "description": "env.database.db",
-        "peekOfCode": "def get_properties():\n    conn = get_connection()\n    cursor = conn.cursor()\n    cursor.execute(\"SELECT * FROM properties\")\n    data = cursor.fetchall()\n    conn.close()\n    return data\ndef add_property(name, address, description):\n    conn = get_connection()\n    cursor = conn.cursor()",
+        "peekOfCode": "def get_properties():\n    conn = get_connection()\n    cursor = conn.cursor()\n    cursor.execute(\"SELECT id, name, address, description FROM properties\")\n    data = cursor.fetchall()\n    conn.close()\n    return data\ndef add_property(name, address, description):\n    conn = get_connection()\n    cursor = conn.cursor()",
         "detail": "env.database.db",
         "documentation": {}
     },
@@ -569,7 +722,7 @@
         "kind": 5,
         "importPath": "env.database.db",
         "description": "env.database.db",
-        "peekOfCode": "DB_NAME = \"rent_management.db\"\ndef get_connection():\n    return sqlite3.connect(DB_NAME)\ndef initialize_database():\n    conn = get_connection()\n    cursor = conn.cursor()\n    cursor.execute(\n        \"\"\"\n        CREATE TABLE IF NOT EXISTS properties (\n            id INTEGER PRIMARY KEY AUTOINCREMENT,",
+        "peekOfCode": "DB_NAME = \"rent_management.db\"\ndef get_connection():\n    return sqlite3.connect(DB_NAME)\ndef _get_table_columns(cursor, table_name):\n    cursor.execute(f\"PRAGMA table_info({table_name})\")\n    return [row[1] for row in cursor.fetchall()]\ndef _migrate_properties_schema(cursor):\n    columns = set(_get_table_columns(cursor, \"properties\"))\n    # Older databases may not have the columns used by the current UI.\n    if \"name\" not in columns:",
         "detail": "env.database.db",
         "documentation": {}
     },
