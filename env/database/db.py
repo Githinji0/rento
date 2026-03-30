@@ -286,3 +286,94 @@ def get_unit_list():
     data = cursor.fetchall()
     conn.close()
     return data
+
+
+
+# ===== PAYMENT OPERATIONS =====
+
+def get_payments():
+    conn = get_connection()
+    cursor = conn.cursor()
+
+    cursor.execute("""
+        SELECT payments.id,
+               tenants.name,
+               payments.amount,
+               payments.payment_date,
+               payments.month_covered
+        FROM payments
+        LEFT JOIN tenants
+        ON payments.tenant_id = tenants.id
+    """)
+
+    data = cursor.fetchall()
+    conn.close()
+    return data
+
+
+def add_payment(tenant_id, amount, payment_date, month):
+    conn = get_connection()
+    cursor = conn.cursor()
+
+    cursor.execute(
+        """INSERT INTO payments
+           (tenant_id, amount, payment_date, month_covered)
+           VALUES (?, ?, ?, ?)""",
+        (tenant_id, amount, payment_date, month),
+    )
+
+    conn.commit()
+    conn.close()
+
+
+def delete_payment(payment_id):
+    conn = get_connection()
+    cursor = conn.cursor()
+
+    cursor.execute("DELETE FROM payments WHERE id=?", (payment_id,))
+    conn.commit()
+    conn.close()
+
+
+def get_tenant_list():
+    conn = get_connection()
+    cursor = conn.cursor()
+
+    cursor.execute("SELECT id, name FROM tenants")
+    data = cursor.fetchall()
+
+    conn.close()
+    return data
+
+
+# ===== ARREARS CALCULATION =====
+
+def get_tenant_rent(tenant_id):
+    conn = get_connection()
+    cursor = conn.cursor()
+
+    cursor.execute("""
+        SELECT units.rent_amount
+        FROM tenants
+        JOIN units ON tenants.unit_id = units.id
+        WHERE tenants.id=?
+    """, (tenant_id,))
+
+    result = cursor.fetchone()
+    conn.close()
+    return result[0] if result else 0
+
+
+def get_total_paid(tenant_id):
+    conn = get_connection()
+    cursor = conn.cursor()
+
+    cursor.execute("""
+        SELECT SUM(amount)
+        FROM payments
+        WHERE tenant_id=?
+    """, (tenant_id,))
+
+    result = cursor.fetchone()
+    conn.close()
+    return result[0] if result[0] else 0

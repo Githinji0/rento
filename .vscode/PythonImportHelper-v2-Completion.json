@@ -56,6 +56,94 @@
         "documentation": {}
     },
     {
+        "label": "QLabel",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QMessageBox",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QComboBox",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QDateEdit",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QWidget",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QVBoxLayout",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QHBoxLayout",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QPushButton",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QTableWidget",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QTableWidgetItem",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QLineEdit",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
         "label": "QTextEdit",
         "importPath": "PySide6.QtWidgets",
         "description": "PySide6.QtWidgets",
@@ -336,6 +424,70 @@
         "documentation": {}
     },
     {
+        "label": "QDate",
+        "importPath": "PySide6.QtCore",
+        "description": "PySide6.QtCore",
+        "isExtraImport": true,
+        "detail": "PySide6.QtCore",
+        "documentation": {}
+    },
+    {
+        "label": "QDate",
+        "importPath": "PySide6.QtCore",
+        "description": "PySide6.QtCore",
+        "isExtraImport": true,
+        "detail": "PySide6.QtCore",
+        "documentation": {}
+    },
+    {
+        "label": "get_payments",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "add_payment",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "delete_payment",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "get_tenant_list",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "get_tenant_rent",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "get_total_paid",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
         "label": "get_properties",
         "importPath": "database.db",
         "description": "database.db",
@@ -456,14 +608,6 @@
         "documentation": {}
     },
     {
-        "label": "QDate",
-        "importPath": "PySide6.QtCore",
-        "description": "PySide6.QtCore",
-        "isExtraImport": true,
-        "detail": "PySide6.QtCore",
-        "documentation": {}
-    },
-    {
         "label": "sqlite3",
         "kind": 6,
         "isExtraImport": true,
@@ -544,6 +688,23 @@
         "description": "core.tenants",
         "isExtraImport": true,
         "detail": "core.tenants",
+        "documentation": {}
+    },
+    {
+        "label": "PaymentsPage",
+        "importPath": "core.payments",
+        "description": "core.payments",
+        "isExtraImport": true,
+        "detail": "core.payments",
+        "documentation": {}
+    },
+    {
+        "label": "PaymentsPage",
+        "kind": 6,
+        "importPath": "env.core.payments",
+        "description": "env.core.payments",
+        "peekOfCode": "class PaymentsPage(QWidget):\n    def __init__(self):\n        super().__init__()\n        layout = QVBoxLayout()\n        # ===== Title =====\n        title = QLabel(\"💰 Payments Management\")\n        title.setStyleSheet(\"font-size: 20px; font-weight: bold;\")\n        layout.addWidget(title)\n        # ===== Table =====\n        self.table = QTableWidget()",
+        "detail": "env.core.payments",
         "documentation": {}
     },
     {
@@ -714,6 +875,60 @@
         "importPath": "env.database.db",
         "description": "env.database.db",
         "peekOfCode": "def get_unit_list():\n    conn = get_connection()\n    cursor = conn.cursor()\n    cursor.execute(\"\"\"\n        SELECT units.id, units.unit_number\n        FROM units\n    \"\"\")\n    data = cursor.fetchall()\n    conn.close()\n    return data",
+        "detail": "env.database.db",
+        "documentation": {}
+    },
+    {
+        "label": "get_payments",
+        "kind": 2,
+        "importPath": "env.database.db",
+        "description": "env.database.db",
+        "peekOfCode": "def get_payments():\n    conn = get_connection()\n    cursor = conn.cursor()\n    cursor.execute(\"\"\"\n        SELECT payments.id,\n               tenants.name,\n               payments.amount,\n               payments.payment_date,\n               payments.month_covered\n        FROM payments",
+        "detail": "env.database.db",
+        "documentation": {}
+    },
+    {
+        "label": "add_payment",
+        "kind": 2,
+        "importPath": "env.database.db",
+        "description": "env.database.db",
+        "peekOfCode": "def add_payment(tenant_id, amount, payment_date, month):\n    conn = get_connection()\n    cursor = conn.cursor()\n    cursor.execute(\n        \"\"\"INSERT INTO payments\n           (tenant_id, amount, payment_date, month_covered)\n           VALUES (?, ?, ?, ?)\"\"\",\n        (tenant_id, amount, payment_date, month),\n    )\n    conn.commit()",
+        "detail": "env.database.db",
+        "documentation": {}
+    },
+    {
+        "label": "delete_payment",
+        "kind": 2,
+        "importPath": "env.database.db",
+        "description": "env.database.db",
+        "peekOfCode": "def delete_payment(payment_id):\n    conn = get_connection()\n    cursor = conn.cursor()\n    cursor.execute(\"DELETE FROM payments WHERE id=?\", (payment_id,))\n    conn.commit()\n    conn.close()\ndef get_tenant_list():\n    conn = get_connection()\n    cursor = conn.cursor()\n    cursor.execute(\"SELECT id, name FROM tenants\")",
+        "detail": "env.database.db",
+        "documentation": {}
+    },
+    {
+        "label": "get_tenant_list",
+        "kind": 2,
+        "importPath": "env.database.db",
+        "description": "env.database.db",
+        "peekOfCode": "def get_tenant_list():\n    conn = get_connection()\n    cursor = conn.cursor()\n    cursor.execute(\"SELECT id, name FROM tenants\")\n    data = cursor.fetchall()\n    conn.close()\n    return data\n# ===== ARREARS CALCULATION =====\ndef get_tenant_rent(tenant_id):\n    conn = get_connection()",
+        "detail": "env.database.db",
+        "documentation": {}
+    },
+    {
+        "label": "get_tenant_rent",
+        "kind": 2,
+        "importPath": "env.database.db",
+        "description": "env.database.db",
+        "peekOfCode": "def get_tenant_rent(tenant_id):\n    conn = get_connection()\n    cursor = conn.cursor()\n    cursor.execute(\"\"\"\n        SELECT units.rent_amount\n        FROM tenants\n        JOIN units ON tenants.unit_id = units.id\n        WHERE tenants.id=?\n    \"\"\", (tenant_id,))\n    result = cursor.fetchone()",
+        "detail": "env.database.db",
+        "documentation": {}
+    },
+    {
+        "label": "get_total_paid",
+        "kind": 2,
+        "importPath": "env.database.db",
+        "description": "env.database.db",
+        "peekOfCode": "def get_total_paid(tenant_id):\n    conn = get_connection()\n    cursor = conn.cursor()\n    cursor.execute(\"\"\"\n        SELECT SUM(amount)\n        FROM payments\n        WHERE tenant_id=?\n    \"\"\", (tenant_id,))\n    result = cursor.fetchone()\n    conn.close()",
         "detail": "env.database.db",
         "documentation": {}
     },

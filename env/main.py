@@ -9,6 +9,7 @@ from database.db import initialize_database
 from core.properties import PropertiesPage
 from core.units import UnitsPage
 from core.tenants import TenantsPage
+from core.payments import PaymentsPage
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -53,7 +54,7 @@ class MainWindow(QMainWindow):
         self.stack.addWidget(PropertiesPage())
         self.stack.addWidget(UnitsPage())
         self.stack.addWidget(TenantsPage())
-        self.stack.addWidget(QLabel("Payments Page"))
+        self.stack.addWidget(PaymentsPage())
         self.stack.addWidget(QLabel("Reports Page"))
 
         # ===== Navigation Logic =====
