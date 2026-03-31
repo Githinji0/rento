@@ -377,3 +377,97 @@ def get_total_paid(tenant_id):
     result = cursor.fetchone()
     conn.close()
     return result[0] if result[0] else 0
+
+
+
+# ===== DASHBOARD STATS =====
+
+def count_properties():
+    conn = get_connection()
+    cursor = conn.cursor()
+    cursor.execute("SELECT COUNT(*) FROM properties")
+    result = cursor.fetchone()[0]
+    conn.close()
+    return result
+
+
+def count_units():
+    conn = get_connection()
+    cursor = conn.cursor()
+    cursor.execute("SELECT COUNT(*) FROM units")
+    result = cursor.fetchone()[0]
+    conn.close()
+    return result
+
+
+def count_occupied_units():
+    conn = get_connection()
+    cursor = conn.cursor()
+    cursor.execute("SELECT COUNT(*) FROM units WHERE status='Occupied'")
+    result = cursor.fetchone()[0]
+    conn.close()
+    return result
+
+
+def count_vacant_units():
+    conn = get_connection()
+    cursor = conn.cursor()
+    cursor.execute("SELECT COUNT(*) FROM units WHERE status='Vacant'")
+    result = cursor.fetchone()[0]
+    conn.close()
+    return result
+
+
+def count_tenants():
+    conn = get_connection()
+    cursor = conn.cursor()
+    cursor.execute("SELECT COUNT(*) FROM tenants")
+    result = cursor.fetchone()[0]
+    conn.close()
+    return result
+
+
+def total_income():
+    conn = get_connection()
+    cursor = conn.cursor()
+    cursor.execute("SELECT SUM(amount) FROM payments")
+    result = cursor.fetchone()[0]
+    conn.close()
+    return result if result else 0
+
+
+def total_arrears():
+    conn = get_connection()
+    cursor = conn.cursor()
+
+    cursor.execute("""
+        SELECT tenants.id
+        FROM tenants
+    """)
+    tenants = cursor.fetchall()
+
+    total = 0
+
+    for (tenant_id,) in tenants:
+        cursor.execute("""
+            SELECT units.rent_amount
+            FROM tenants
+            JOIN units ON tenants.unit_id = units.id
+            WHERE tenants.id=?
+        """, (tenant_id,))
+        rent = cursor.fetchone()
+
+        cursor.execute("""
+            SELECT SUM(amount)
+            FROM payments
+            WHERE tenant_id=?
+        """, (tenant_id,))
+        paid = cursor.fetchone()
+
+        rent_val = rent[0] if rent else 0
+        paid_val = paid[0] if paid[0] else 0
+
+        total += (rent_val - paid_val)
+
+    conn.close()
+    return total

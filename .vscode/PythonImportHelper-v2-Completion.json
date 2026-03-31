@@ -16,6 +16,46 @@
         "documentation": {}
     },
     {
+        "label": "QGridLayout",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QLabel",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QPushButton",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QWidget",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QVBoxLayout",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
         "label": "QHBoxLayout",
         "importPath": "PySide6.QtWidgets",
         "description": "PySide6.QtWidgets",
@@ -424,19 +464,59 @@
         "documentation": {}
     },
     {
-        "label": "QDate",
-        "importPath": "PySide6.QtCore",
-        "description": "PySide6.QtCore",
+        "label": "count_properties",
+        "importPath": "database",
+        "description": "database",
         "isExtraImport": true,
-        "detail": "PySide6.QtCore",
+        "detail": "database",
         "documentation": {}
     },
     {
-        "label": "QDate",
-        "importPath": "PySide6.QtCore",
-        "description": "PySide6.QtCore",
+        "label": "count_units",
+        "importPath": "database",
+        "description": "database",
         "isExtraImport": true,
-        "detail": "PySide6.QtCore",
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "count_occupied_units",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "count_vacant_units",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "count_tenants",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "total_income",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "total_arrears",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
         "documentation": {}
     },
     {
@@ -485,6 +565,22 @@
         "description": "database",
         "isExtraImport": true,
         "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "QDate",
+        "importPath": "PySide6.QtCore",
+        "description": "PySide6.QtCore",
+        "isExtraImport": true,
+        "detail": "PySide6.QtCore",
+        "documentation": {}
+    },
+    {
+        "label": "QDate",
+        "importPath": "PySide6.QtCore",
+        "description": "PySide6.QtCore",
+        "isExtraImport": true,
+        "detail": "PySide6.QtCore",
         "documentation": {}
     },
     {
@@ -696,6 +792,24 @@
         "description": "core.payments",
         "isExtraImport": true,
         "detail": "core.payments",
+        "documentation": {}
+    },
+    {
+        "label": "StatCard",
+        "kind": 6,
+        "importPath": "env.core.dashboard",
+        "description": "env.core.dashboard",
+        "peekOfCode": "class StatCard(QLabel):\n    def __init__(self, title, value):\n        super().__init__()\n        self.setText(f\"{title}\\n\\n{value}\")\n        self.setStyleSheet(\"\"\"\n            background-color: #1e1e2f;\n            color: white;\n            padding: 20px;\n            border-radius: 10px;\n            font-size: 16px;",
+        "detail": "env.core.dashboard",
+        "documentation": {}
+    },
+    {
+        "label": "Dashboard",
+        "kind": 6,
+        "importPath": "env.core.dashboard",
+        "description": "env.core.dashboard",
+        "peekOfCode": "class Dashboard(QWidget):\n    def __init__(self):\n        super().__init__()\n        self.layout = QVBoxLayout()\n        title = QLabel(\"📊 Dashboard Overview\")\n        title.setStyleSheet(\"font-size: 24px; font-weight: bold;\")\n        self.layout.addWidget(title)\n        # Grid Layout\n        self.grid = QGridLayout()\n        self.layout.addLayout(self.grid)",
+        "detail": "env.core.dashboard",
         "documentation": {}
     },
     {
@@ -929,6 +1043,69 @@
         "importPath": "env.database.db",
         "description": "env.database.db",
         "peekOfCode": "def get_total_paid(tenant_id):\n    conn = get_connection()\n    cursor = conn.cursor()\n    cursor.execute(\"\"\"\n        SELECT SUM(amount)\n        FROM payments\n        WHERE tenant_id=?\n    \"\"\", (tenant_id,))\n    result = cursor.fetchone()\n    conn.close()",
+        "detail": "env.database.db",
+        "documentation": {}
+    },
+    {
+        "label": "count_properties",
+        "kind": 2,
+        "importPath": "env.database.db",
+        "description": "env.database.db",
+        "peekOfCode": "def count_properties():\n    conn = get_connection()\n    cursor = conn.cursor()\n    cursor.execute(\"SELECT COUNT(*) FROM properties\")\n    result = cursor.fetchone()[0]\n    conn.close()\n    return result\ndef count_units():\n    conn = get_connection()\n    cursor = conn.cursor()",
+        "detail": "env.database.db",
+        "documentation": {}
+    },
+    {
+        "label": "count_units",
+        "kind": 2,
+        "importPath": "env.database.db",
+        "description": "env.database.db",
+        "peekOfCode": "def count_units():\n    conn = get_connection()\n    cursor = conn.cursor()\n    cursor.execute(\"SELECT COUNT(*) FROM units\")\n    result = cursor.fetchone()[0]\n    conn.close()\n    return result\ndef count_occupied_units():\n    conn = get_connection()\n    cursor = conn.cursor()",
+        "detail": "env.database.db",
+        "documentation": {}
+    },
+    {
+        "label": "count_occupied_units",
+        "kind": 2,
+        "importPath": "env.database.db",
+        "description": "env.database.db",
+        "peekOfCode": "def count_occupied_units():\n    conn = get_connection()\n    cursor = conn.cursor()\n    cursor.execute(\"SELECT COUNT(*) FROM units WHERE status='Occupied'\")\n    result = cursor.fetchone()[0]\n    conn.close()\n    return result\ndef count_vacant_units():\n    conn = get_connection()\n    cursor = conn.cursor()",
+        "detail": "env.database.db",
+        "documentation": {}
+    },
+    {
+        "label": "count_vacant_units",
+        "kind": 2,
+        "importPath": "env.database.db",
+        "description": "env.database.db",
+        "peekOfCode": "def count_vacant_units():\n    conn = get_connection()\n    cursor = conn.cursor()\n    cursor.execute(\"SELECT COUNT(*) FROM units WHERE status='Vacant'\")\n    result = cursor.fetchone()[0]\n    conn.close()\n    return result\ndef count_tenants():\n    conn = get_connection()\n    cursor = conn.cursor()",
+        "detail": "env.database.db",
+        "documentation": {}
+    },
+    {
+        "label": "count_tenants",
+        "kind": 2,
+        "importPath": "env.database.db",
+        "description": "env.database.db",
+        "peekOfCode": "def count_tenants():\n    conn = get_connection()\n    cursor = conn.cursor()\n    cursor.execute(\"SELECT COUNT(*) FROM tenants\")\n    result = cursor.fetchone()[0]\n    conn.close()\n    return result\ndef total_income():\n    conn = get_connection()\n    cursor = conn.cursor()",
+        "detail": "env.database.db",
+        "documentation": {}
+    },
+    {
+        "label": "total_income",
+        "kind": 2,
+        "importPath": "env.database.db",
+        "description": "env.database.db",
+        "peekOfCode": "def total_income():\n    conn = get_connection()\n    cursor = conn.cursor()\n    cursor.execute(\"SELECT SUM(amount) FROM payments\")\n    result = cursor.fetchone()[0]\n    conn.close()\n    return result if result else 0\ndef total_arrears():\n    conn = get_connection()\n    cursor = conn.cursor()",
+        "detail": "env.database.db",
+        "documentation": {}
+    },
+    {
+        "label": "total_arrears",
+        "kind": 2,
+        "importPath": "env.database.db",
+        "description": "env.database.db",
+        "peekOfCode": "def total_arrears():\n    conn = get_connection()\n    cursor = conn.cursor()\n    cursor.execute(\"\"\"\n        SELECT tenants.id\n        FROM tenants\n    \"\"\")\n    tenants = cursor.fetchall()\n    total = 0\n    for (tenant_id,) in tenants:",
         "detail": "env.database.db",
         "documentation": {}
     },
