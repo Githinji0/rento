@@ -28,7 +28,7 @@ class PropertiesPage(QWidget):
         layout.setSpacing(12)
 
         # ===== Title =====
-        title = QLabel("🏢 Properties Management")
+        title = QLabel("Properties Management")
         title.setObjectName("pageTitle")
         layout.addWidget(title)
 

@@ -1,4 +1,5 @@
 import sqlite3
+from datetime import date
 
 
 DB_NAME = "rent_management.db"
@@ -110,6 +111,19 @@ def initialize_database():
         )
     """)
     _migrate_payments_schema(cursor)
+    cursor.execute(
+        """
+        CREATE TABLE IF NOT EXISTS dashboard_monthly_snapshots (
+            month_key TEXT PRIMARY KEY,
+            properties INTEGER NOT NULL,
+            units INTEGER NOT NULL,
+            occupied INTEGER NOT NULL,
+            vacant INTEGER NOT NULL,
+            arrears REAL NOT NULL,
+            created_at TEXT NOT NULL DEFAULT (datetime('now'))
+        )
+        """
+    )
     conn.commit()
     conn.close()
 
@@ -489,3 +503,78 @@ def total_arrears():
 
     conn.close()
     return total
+
+
+def get_monthly_income(month_key):
+    conn = get_connection()
+    cursor = conn.cursor()
+    cursor.execute(
+        """
+        SELECT COALESCE(SUM(amount), 0)
+        FROM payments
+        WHERE month_covered = ?
+           OR substr(payment_date, 1, 7) = ?
+        """,
+        (month_key, month_key),
+    )
+    total = cursor.fetchone()[0] or 0
+    conn.close()
+    return total
+
+
+def upsert_dashboard_monthly_snapshot(
+    month_key,
+    properties,
+    units,
+    occupied,
+    vacant,
+    arrears,
+):
+    conn = get_connection()
+    cursor = conn.cursor()
+    cursor.execute(
+        """
+        INSERT INTO dashboard_monthly_snapshots
+            (month_key, properties, units, occupied, vacant, arrears)
+        VALUES (?, ?, ?, ?, ?, ?)
+        ON CONFLICT(month_key) DO UPDATE SET
+            properties = excluded.properties,
+            units = excluded.units,
+            occupied = excluded.occupied,
+            vacant = excluded.vacant,
+            arrears = excluded.arrears
+        """,
+        (month_key, properties, units, occupied, vacant, arrears),
+    )
+    conn.commit()
+    conn.close()
+
+
+def get_dashboard_monthly_snapshot(month_key):
+    conn = get_connection()
+    cursor = conn.cursor()
+    cursor.execute(
+        """
+        SELECT properties, units, occupied, vacant, arrears
+        FROM dashboard_monthly_snapshots
+        WHERE month_key = ?
+        """,
+        (month_key,),
+    )
+    row = cursor.fetchone()
+    conn.close()
+
+    if not row:
+        return None
+
+    return {
+        "properties": row[0],
+        "units": row[1],
+        "occupied": row[2],
+        "vacant": row[3],
+        "arrears": row[4],
+    }
+
+
+def get_current_month_key():
+    return date.today().strftime("%Y-%m")

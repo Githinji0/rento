@@ -376,6 +376,22 @@
         "documentation": {}
     },
     {
+        "label": "QBoxLayout",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QGridLayout",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
         "label": "QHBoxLayout",
         "importPath": "PySide6.QtWidgets",
         "description": "PySide6.QtWidgets",
@@ -393,6 +409,22 @@
     },
     {
         "label": "QPushButton",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QScrollArea",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QSizePolicy",
         "importPath": "PySide6.QtWidgets",
         "description": "PySide6.QtWidgets",
         "isExtraImport": true,
@@ -760,6 +792,30 @@
         "documentation": {}
     },
     {
+        "label": "get_current_month_key",
+        "importPath": "database.db",
+        "description": "database.db",
+        "isExtraImport": true,
+        "detail": "database.db",
+        "documentation": {}
+    },
+    {
+        "label": "get_dashboard_monthly_snapshot",
+        "importPath": "database.db",
+        "description": "database.db",
+        "isExtraImport": true,
+        "detail": "database.db",
+        "documentation": {}
+    },
+    {
+        "label": "get_monthly_income",
+        "importPath": "database.db",
+        "description": "database.db",
+        "isExtraImport": true,
+        "detail": "database.db",
+        "documentation": {}
+    },
+    {
         "label": "total_arrears",
         "importPath": "database.db",
         "description": "database.db",
@@ -769,6 +825,14 @@
     },
     {
         "label": "total_income",
+        "importPath": "database.db",
+        "description": "database.db",
+        "isExtraImport": true,
+        "detail": "database.db",
+        "documentation": {}
+    },
+    {
+        "label": "upsert_dashboard_monthly_snapshot",
         "importPath": "database.db",
         "description": "database.db",
         "isExtraImport": true,
@@ -936,7 +1000,7 @@
         "documentation": {}
     },
     {
-        "label": "GREEN_600",
+        "label": "GREEN_300",
         "importPath": "ui.theme",
         "description": "ui.theme",
         "isExtraImport": true,
@@ -1014,6 +1078,22 @@
         "importPath": "sqlite3",
         "description": "sqlite3",
         "detail": "sqlite3",
+        "documentation": {}
+    },
+    {
+        "label": "date",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
         "documentation": {}
     },
     {
@@ -1209,7 +1289,7 @@
         "kind": 6,
         "importPath": "env.core.payments",
         "description": "env.core.payments",
-        "peekOfCode": "class PaymentsPage(QWidget):\n    def __init__(self):\n        super().__init__()\n        self.setStyleSheet(PAGE_STYLESHEET)\n        layout = QVBoxLayout()\n        layout.setContentsMargins(20, 20, 20, 20)\n        layout.setSpacing(12)\n        # ===== Title =====\n        title = QLabel(\"💰 Payments Management\")\n        title.setObjectName(\"pageTitle\")",
+        "peekOfCode": "class PaymentsPage(QWidget):\n    def __init__(self):\n        super().__init__()\n        self.setStyleSheet(PAGE_STYLESHEET)\n        layout = QVBoxLayout()\n        layout.setContentsMargins(20, 20, 20, 20)\n        layout.setSpacing(12)\n        # ===== Title =====\n        title = QLabel(\" Payments Management\")\n        title.setObjectName(\"pageTitle\")",
         "detail": "env.core.payments",
         "documentation": {}
     },
@@ -1218,7 +1298,7 @@
         "kind": 6,
         "importPath": "env.core.properties",
         "description": "env.core.properties",
-        "peekOfCode": "class PropertiesPage(QWidget):\n    def __init__(self):\n        super().__init__()\n        self.setStyleSheet(PAGE_STYLESHEET)\n        layout = QVBoxLayout()\n        layout.setContentsMargins(20, 20, 20, 20)\n        layout.setSpacing(12)\n        # ===== Title =====\n        title = QLabel(\"🏢 Properties Management\")\n        title.setObjectName(\"pageTitle\")",
+        "peekOfCode": "class PropertiesPage(QWidget):\n    def __init__(self):\n        super().__init__()\n        self.setStyleSheet(PAGE_STYLESHEET)\n        layout = QVBoxLayout()\n        layout.setContentsMargins(20, 20, 20, 20)\n        layout.setSpacing(12)\n        # ===== Title =====\n        title = QLabel(\"Properties Management\")\n        title.setObjectName(\"pageTitle\")",
         "detail": "env.core.properties",
         "documentation": {}
     },
@@ -1502,6 +1582,42 @@
         "documentation": {}
     },
     {
+        "label": "get_monthly_income",
+        "kind": 2,
+        "importPath": "env.database.db",
+        "description": "env.database.db",
+        "peekOfCode": "def get_monthly_income(month_key):\n    conn = get_connection()\n    cursor = conn.cursor()\n    cursor.execute(\n        \"\"\"\n        SELECT COALESCE(SUM(amount), 0)\n        FROM payments\n        WHERE month_covered = ?\n           OR substr(payment_date, 1, 7) = ?\n        \"\"\",",
+        "detail": "env.database.db",
+        "documentation": {}
+    },
+    {
+        "label": "upsert_dashboard_monthly_snapshot",
+        "kind": 2,
+        "importPath": "env.database.db",
+        "description": "env.database.db",
+        "peekOfCode": "def upsert_dashboard_monthly_snapshot(\n    month_key,\n    properties,\n    units,\n    occupied,\n    vacant,\n    arrears,\n):\n    conn = get_connection()\n    cursor = conn.cursor()",
+        "detail": "env.database.db",
+        "documentation": {}
+    },
+    {
+        "label": "get_dashboard_monthly_snapshot",
+        "kind": 2,
+        "importPath": "env.database.db",
+        "description": "env.database.db",
+        "peekOfCode": "def get_dashboard_monthly_snapshot(month_key):\n    conn = get_connection()\n    cursor = conn.cursor()\n    cursor.execute(\n        \"\"\"\n        SELECT properties, units, occupied, vacant, arrears\n        FROM dashboard_monthly_snapshots\n        WHERE month_key = ?\n        \"\"\",\n        (month_key,),",
+        "detail": "env.database.db",
+        "documentation": {}
+    },
+    {
+        "label": "get_current_month_key",
+        "kind": 2,
+        "importPath": "env.database.db",
+        "description": "env.database.db",
+        "peekOfCode": "def get_current_month_key():\n    return date.today().strftime(\"%Y-%m\")",
+        "detail": "env.database.db",
+        "documentation": {}
+    },
+    {
         "label": "DB_NAME",
         "kind": 5,
         "importPath": "env.database.db",
@@ -1511,11 +1627,20 @@
         "documentation": {}
     },
     {
+        "label": "MetricCard",
+        "kind": 6,
+        "importPath": "env.ui.dashboard",
+        "description": "env.ui.dashboard",
+        "peekOfCode": "class MetricCard(QWidget):\n    def __init__(self, heading):\n        super().__init__()\n        self.setObjectName(\"metricCard\")\n        layout = QVBoxLayout(self)\n        layout.setContentsMargins(20, 18, 20, 18)\n        layout.setSpacing(8)\n        self.heading = QLabel(heading)\n        self.heading.setObjectName(\"metricHeading\")\n        self.value = QLabel(\"--\")",
+        "detail": "env.ui.dashboard",
+        "documentation": {}
+    },
+    {
         "label": "Dashboard",
         "kind": 6,
         "importPath": "env.ui.dashboard",
         "description": "env.ui.dashboard",
-        "peekOfCode": "class Dashboard(QWidget):\n    def __init__(self):\n        super().__init__()\n        layout = QVBoxLayout()\n        layout.setContentsMargins(24, 24, 24, 24)\n        layout.setSpacing(16)\n        self.setStyleSheet(\n            f\"\"\"\n            QWidget {{\n                background: {WHITE};",
+        "peekOfCode": "class Dashboard(QWidget):\n    def __init__(self):\n        super().__init__()\n        outer = QVBoxLayout(self)\n        outer.setContentsMargins(0, 0, 0, 0)\n        scroll = QScrollArea()\n        scroll.setWidgetResizable(True)\n        scroll.setStyleSheet(\"border: none; background: transparent;\")\n        content = QWidget()\n        root = QVBoxLayout(content)",
         "detail": "env.ui.dashboard",
         "documentation": {}
     },

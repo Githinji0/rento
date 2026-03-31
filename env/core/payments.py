@@ -32,7 +32,7 @@ class PaymentsPage(QWidget):
         layout.setSpacing(12)
 
         # ===== Title =====
-        title = QLabel("💰 Payments Management")
+        title = QLabel(" Payments Management")
         title.setObjectName("pageTitle")
         layout.addWidget(title)
 
@@ -81,9 +81,9 @@ class PaymentsPage(QWidget):
         # ===== Buttons =====
         btn_layout = QHBoxLayout()
 
-        self.add_btn = QPushButton("➕ Add Payment")
-        self.delete_btn = QPushButton("🗑️ Delete")
-        self.refresh_btn = QPushButton("🔄 Refresh")
+        self.add_btn = QPushButton(" Add Payment")
+        self.delete_btn = QPushButton(" Delete")
+        self.refresh_btn = QPushButton(" Refresh")
 
         self.add_btn.setStyleSheet(PRIMARY_BUTTON_STYLE)
         self.delete_btn.setStyleSheet(DANGER_BUTTON_STYLE)

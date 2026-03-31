@@ -86,10 +86,10 @@ class TenantsPage(QWidget):
         # ===== Buttons =====
         btn_layout = QHBoxLayout()
 
-        self.add_btn = QPushButton("➕ Add")
-        self.update_btn = QPushButton("✏️ Update")
-        self.delete_btn = QPushButton("🗑️ Delete")
-        self.clear_btn = QPushButton("🔄 Clear")
+        self.add_btn = QPushButton("Add")
+        self.update_btn = QPushButton("Update")
+        self.delete_btn = QPushButton("Delete")
+        self.clear_btn = QPushButton("Clear")
 
         self.add_btn.setStyleSheet(PRIMARY_BUTTON_STYLE)
         self.update_btn.setStyleSheet(PRIMARY_BUTTON_STYLE)
