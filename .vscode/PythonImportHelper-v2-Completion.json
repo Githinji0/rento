@@ -376,7 +376,23 @@
         "documentation": {}
     },
     {
-        "label": "QWidget",
+        "label": "QHBoxLayout",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QLabel",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QPushButton",
         "importPath": "PySide6.QtWidgets",
         "description": "PySide6.QtWidgets",
         "isExtraImport": true,
@@ -392,7 +408,7 @@
         "documentation": {}
     },
     {
-        "label": "QLabel",
+        "label": "QWidget",
         "importPath": "PySide6.QtWidgets",
         "description": "PySide6.QtWidgets",
         "isExtraImport": true,
@@ -464,6 +480,14 @@
         "documentation": {}
     },
     {
+        "label": "QButtonGroup",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
         "label": "count_properties",
         "importPath": "database",
         "description": "database",
@@ -520,67 +544,75 @@
         "documentation": {}
     },
     {
-        "label": "get_payments",
-        "importPath": "database",
-        "description": "database",
+        "label": "QDate",
+        "importPath": "PySide6.QtCore",
+        "description": "PySide6.QtCore",
         "isExtraImport": true,
-        "detail": "database",
+        "detail": "PySide6.QtCore",
+        "documentation": {}
+    },
+    {
+        "label": "QDate",
+        "importPath": "PySide6.QtCore",
+        "description": "PySide6.QtCore",
+        "isExtraImport": true,
+        "detail": "PySide6.QtCore",
+        "documentation": {}
+    },
+    {
+        "label": "Qt",
+        "importPath": "PySide6.QtCore",
+        "description": "PySide6.QtCore",
+        "isExtraImport": true,
+        "detail": "PySide6.QtCore",
+        "documentation": {}
+    },
+    {
+        "label": "get_payments",
+        "importPath": "database.db",
+        "description": "database.db",
+        "isExtraImport": true,
+        "detail": "database.db",
         "documentation": {}
     },
     {
         "label": "add_payment",
-        "importPath": "database",
-        "description": "database",
+        "importPath": "database.db",
+        "description": "database.db",
         "isExtraImport": true,
-        "detail": "database",
+        "detail": "database.db",
         "documentation": {}
     },
     {
         "label": "delete_payment",
-        "importPath": "database",
-        "description": "database",
+        "importPath": "database.db",
+        "description": "database.db",
         "isExtraImport": true,
-        "detail": "database",
+        "detail": "database.db",
         "documentation": {}
     },
     {
         "label": "get_tenant_list",
-        "importPath": "database",
-        "description": "database",
+        "importPath": "database.db",
+        "description": "database.db",
         "isExtraImport": true,
-        "detail": "database",
+        "detail": "database.db",
         "documentation": {}
     },
     {
         "label": "get_tenant_rent",
-        "importPath": "database",
-        "description": "database",
+        "importPath": "database.db",
+        "description": "database.db",
         "isExtraImport": true,
-        "detail": "database",
+        "detail": "database.db",
         "documentation": {}
     },
     {
         "label": "get_total_paid",
-        "importPath": "database",
-        "description": "database",
+        "importPath": "database.db",
+        "description": "database.db",
         "isExtraImport": true,
-        "detail": "database",
-        "documentation": {}
-    },
-    {
-        "label": "QDate",
-        "importPath": "PySide6.QtCore",
-        "description": "PySide6.QtCore",
-        "isExtraImport": true,
-        "detail": "PySide6.QtCore",
-        "documentation": {}
-    },
-    {
-        "label": "QDate",
-        "importPath": "PySide6.QtCore",
-        "description": "PySide6.QtCore",
-        "isExtraImport": true,
-        "detail": "PySide6.QtCore",
+        "detail": "database.db",
         "documentation": {}
     },
     {
@@ -696,11 +728,283 @@
         "documentation": {}
     },
     {
+        "label": "count_occupied_units",
+        "importPath": "database.db",
+        "description": "database.db",
+        "isExtraImport": true,
+        "detail": "database.db",
+        "documentation": {}
+    },
+    {
+        "label": "count_properties",
+        "importPath": "database.db",
+        "description": "database.db",
+        "isExtraImport": true,
+        "detail": "database.db",
+        "documentation": {}
+    },
+    {
+        "label": "count_units",
+        "importPath": "database.db",
+        "description": "database.db",
+        "isExtraImport": true,
+        "detail": "database.db",
+        "documentation": {}
+    },
+    {
+        "label": "count_vacant_units",
+        "importPath": "database.db",
+        "description": "database.db",
+        "isExtraImport": true,
+        "detail": "database.db",
+        "documentation": {}
+    },
+    {
+        "label": "total_arrears",
+        "importPath": "database.db",
+        "description": "database.db",
+        "isExtraImport": true,
+        "detail": "database.db",
+        "documentation": {}
+    },
+    {
+        "label": "total_income",
+        "importPath": "database.db",
+        "description": "database.db",
+        "isExtraImport": true,
+        "detail": "database.db",
+        "documentation": {}
+    },
+    {
         "label": "initialize_database",
         "importPath": "database.db",
         "description": "database.db",
         "isExtraImport": true,
         "detail": "database.db",
+        "documentation": {}
+    },
+    {
+        "label": "DANGER_BUTTON_STYLE",
+        "importPath": "ui.theme",
+        "description": "ui.theme",
+        "isExtraImport": true,
+        "detail": "ui.theme",
+        "documentation": {}
+    },
+    {
+        "label": "PAGE_STYLESHEET",
+        "importPath": "ui.theme",
+        "description": "ui.theme",
+        "isExtraImport": true,
+        "detail": "ui.theme",
+        "documentation": {}
+    },
+    {
+        "label": "PRIMARY_BUTTON_STYLE",
+        "importPath": "ui.theme",
+        "description": "ui.theme",
+        "isExtraImport": true,
+        "detail": "ui.theme",
+        "documentation": {}
+    },
+    {
+        "label": "SECONDARY_BUTTON_STYLE",
+        "importPath": "ui.theme",
+        "description": "ui.theme",
+        "isExtraImport": true,
+        "detail": "ui.theme",
+        "documentation": {}
+    },
+    {
+        "label": "DANGER_BUTTON_STYLE",
+        "importPath": "ui.theme",
+        "description": "ui.theme",
+        "isExtraImport": true,
+        "detail": "ui.theme",
+        "documentation": {}
+    },
+    {
+        "label": "PAGE_STYLESHEET",
+        "importPath": "ui.theme",
+        "description": "ui.theme",
+        "isExtraImport": true,
+        "detail": "ui.theme",
+        "documentation": {}
+    },
+    {
+        "label": "PRIMARY_BUTTON_STYLE",
+        "importPath": "ui.theme",
+        "description": "ui.theme",
+        "isExtraImport": true,
+        "detail": "ui.theme",
+        "documentation": {}
+    },
+    {
+        "label": "SECONDARY_BUTTON_STYLE",
+        "importPath": "ui.theme",
+        "description": "ui.theme",
+        "isExtraImport": true,
+        "detail": "ui.theme",
+        "documentation": {}
+    },
+    {
+        "label": "DANGER_BUTTON_STYLE",
+        "importPath": "ui.theme",
+        "description": "ui.theme",
+        "isExtraImport": true,
+        "detail": "ui.theme",
+        "documentation": {}
+    },
+    {
+        "label": "PAGE_STYLESHEET",
+        "importPath": "ui.theme",
+        "description": "ui.theme",
+        "isExtraImport": true,
+        "detail": "ui.theme",
+        "documentation": {}
+    },
+    {
+        "label": "PRIMARY_BUTTON_STYLE",
+        "importPath": "ui.theme",
+        "description": "ui.theme",
+        "isExtraImport": true,
+        "detail": "ui.theme",
+        "documentation": {}
+    },
+    {
+        "label": "SECONDARY_BUTTON_STYLE",
+        "importPath": "ui.theme",
+        "description": "ui.theme",
+        "isExtraImport": true,
+        "detail": "ui.theme",
+        "documentation": {}
+    },
+    {
+        "label": "DANGER_BUTTON_STYLE",
+        "importPath": "ui.theme",
+        "description": "ui.theme",
+        "isExtraImport": true,
+        "detail": "ui.theme",
+        "documentation": {}
+    },
+    {
+        "label": "PAGE_STYLESHEET",
+        "importPath": "ui.theme",
+        "description": "ui.theme",
+        "isExtraImport": true,
+        "detail": "ui.theme",
+        "documentation": {}
+    },
+    {
+        "label": "PRIMARY_BUTTON_STYLE",
+        "importPath": "ui.theme",
+        "description": "ui.theme",
+        "isExtraImport": true,
+        "detail": "ui.theme",
+        "documentation": {}
+    },
+    {
+        "label": "SECONDARY_BUTTON_STYLE",
+        "importPath": "ui.theme",
+        "description": "ui.theme",
+        "isExtraImport": true,
+        "detail": "ui.theme",
+        "documentation": {}
+    },
+    {
+        "label": "CARD_BORDER",
+        "importPath": "ui.theme",
+        "description": "ui.theme",
+        "isExtraImport": true,
+        "detail": "ui.theme",
+        "documentation": {}
+    },
+    {
+        "label": "GREEN_100",
+        "importPath": "ui.theme",
+        "description": "ui.theme",
+        "isExtraImport": true,
+        "detail": "ui.theme",
+        "documentation": {}
+    },
+    {
+        "label": "GREEN_200",
+        "importPath": "ui.theme",
+        "description": "ui.theme",
+        "isExtraImport": true,
+        "detail": "ui.theme",
+        "documentation": {}
+    },
+    {
+        "label": "GREEN_600",
+        "importPath": "ui.theme",
+        "description": "ui.theme",
+        "isExtraImport": true,
+        "detail": "ui.theme",
+        "documentation": {}
+    },
+    {
+        "label": "GREEN_700",
+        "importPath": "ui.theme",
+        "description": "ui.theme",
+        "isExtraImport": true,
+        "detail": "ui.theme",
+        "documentation": {}
+    },
+    {
+        "label": "GREEN_900",
+        "importPath": "ui.theme",
+        "description": "ui.theme",
+        "isExtraImport": true,
+        "detail": "ui.theme",
+        "documentation": {}
+    },
+    {
+        "label": "PRIMARY_BUTTON_STYLE",
+        "importPath": "ui.theme",
+        "description": "ui.theme",
+        "isExtraImport": true,
+        "detail": "ui.theme",
+        "documentation": {}
+    },
+    {
+        "label": "TEXT_MAIN",
+        "importPath": "ui.theme",
+        "description": "ui.theme",
+        "isExtraImport": true,
+        "detail": "ui.theme",
+        "documentation": {}
+    },
+    {
+        "label": "TEXT_MUTED",
+        "importPath": "ui.theme",
+        "description": "ui.theme",
+        "isExtraImport": true,
+        "detail": "ui.theme",
+        "documentation": {}
+    },
+    {
+        "label": "WHITE",
+        "importPath": "ui.theme",
+        "description": "ui.theme",
+        "isExtraImport": true,
+        "detail": "ui.theme",
+        "documentation": {}
+    },
+    {
+        "label": "MAIN_WINDOW_STYLE",
+        "importPath": "ui.theme",
+        "description": "ui.theme",
+        "isExtraImport": true,
+        "detail": "ui.theme",
+        "documentation": {}
+    },
+    {
+        "label": "NAV_BUTTON_STYLE",
+        "importPath": "ui.theme",
+        "description": "ui.theme",
+        "isExtraImport": true,
+        "detail": "ui.theme",
         "documentation": {}
     },
     {
@@ -710,6 +1014,94 @@
         "importPath": "sqlite3",
         "description": "sqlite3",
         "detail": "sqlite3",
+        "documentation": {}
+    },
+    {
+        "label": "QColor",
+        "importPath": "PySide6.QtGui",
+        "description": "PySide6.QtGui",
+        "isExtraImport": true,
+        "detail": "PySide6.QtGui",
+        "documentation": {}
+    },
+    {
+        "label": "QFont",
+        "importPath": "PySide6.QtGui",
+        "description": "PySide6.QtGui",
+        "isExtraImport": true,
+        "detail": "PySide6.QtGui",
+        "documentation": {}
+    },
+    {
+        "label": "QPainter",
+        "importPath": "PySide6.QtGui",
+        "description": "PySide6.QtGui",
+        "isExtraImport": true,
+        "detail": "PySide6.QtGui",
+        "documentation": {}
+    },
+    {
+        "label": "QPen",
+        "importPath": "PySide6.QtGui",
+        "description": "PySide6.QtGui",
+        "isExtraImport": true,
+        "detail": "PySide6.QtGui",
+        "documentation": {}
+    },
+    {
+        "label": "QBarCategoryAxis",
+        "importPath": "PySide6.QtCharts",
+        "description": "PySide6.QtCharts",
+        "isExtraImport": true,
+        "detail": "PySide6.QtCharts",
+        "documentation": {}
+    },
+    {
+        "label": "QBarSeries",
+        "importPath": "PySide6.QtCharts",
+        "description": "PySide6.QtCharts",
+        "isExtraImport": true,
+        "detail": "PySide6.QtCharts",
+        "documentation": {}
+    },
+    {
+        "label": "QBarSet",
+        "importPath": "PySide6.QtCharts",
+        "description": "PySide6.QtCharts",
+        "isExtraImport": true,
+        "detail": "PySide6.QtCharts",
+        "documentation": {}
+    },
+    {
+        "label": "QChart",
+        "importPath": "PySide6.QtCharts",
+        "description": "PySide6.QtCharts",
+        "isExtraImport": true,
+        "detail": "PySide6.QtCharts",
+        "documentation": {}
+    },
+    {
+        "label": "QChartView",
+        "importPath": "PySide6.QtCharts",
+        "description": "PySide6.QtCharts",
+        "isExtraImport": true,
+        "detail": "PySide6.QtCharts",
+        "documentation": {}
+    },
+    {
+        "label": "QPieSeries",
+        "importPath": "PySide6.QtCharts",
+        "description": "PySide6.QtCharts",
+        "isExtraImport": true,
+        "detail": "PySide6.QtCharts",
+        "documentation": {}
+    },
+    {
+        "label": "QValueAxis",
+        "importPath": "PySide6.QtCharts",
+        "description": "PySide6.QtCharts",
+        "isExtraImport": true,
+        "detail": "PySide6.QtCharts",
         "documentation": {}
     },
     {
@@ -817,7 +1209,7 @@
         "kind": 6,
         "importPath": "env.core.payments",
         "description": "env.core.payments",
-        "peekOfCode": "class PaymentsPage(QWidget):\n    def __init__(self):\n        super().__init__()\n        layout = QVBoxLayout()\n        # ===== Title =====\n        title = QLabel(\"💰 Payments Management\")\n        title.setStyleSheet(\"font-size: 20px; font-weight: bold;\")\n        layout.addWidget(title)\n        # ===== Table =====\n        self.table = QTableWidget()",
+        "peekOfCode": "class PaymentsPage(QWidget):\n    def __init__(self):\n        super().__init__()\n        self.setStyleSheet(PAGE_STYLESHEET)\n        layout = QVBoxLayout()\n        layout.setContentsMargins(20, 20, 20, 20)\n        layout.setSpacing(12)\n        # ===== Title =====\n        title = QLabel(\"💰 Payments Management\")\n        title.setObjectName(\"pageTitle\")",
         "detail": "env.core.payments",
         "documentation": {}
     },
@@ -826,7 +1218,7 @@
         "kind": 6,
         "importPath": "env.core.properties",
         "description": "env.core.properties",
-        "peekOfCode": "class PropertiesPage(QWidget):\n    def __init__(self):\n        super().__init__()\n        layout = QVBoxLayout()\n        # ===== Title =====\n        title = QLabel(\"🏢 Properties Management\")\n        title.setStyleSheet(\"font-size: 20px; font-weight: bold;\")\n        layout.addWidget(title)\n        # ===== Table =====\n        self.table = QTableWidget()",
+        "peekOfCode": "class PropertiesPage(QWidget):\n    def __init__(self):\n        super().__init__()\n        self.setStyleSheet(PAGE_STYLESHEET)\n        layout = QVBoxLayout()\n        layout.setContentsMargins(20, 20, 20, 20)\n        layout.setSpacing(12)\n        # ===== Title =====\n        title = QLabel(\"🏢 Properties Management\")\n        title.setObjectName(\"pageTitle\")",
         "detail": "env.core.properties",
         "documentation": {}
     },
@@ -835,7 +1227,7 @@
         "kind": 6,
         "importPath": "env.core.tenants",
         "description": "env.core.tenants",
-        "peekOfCode": "class TenantsPage(QWidget):\n    def __init__(self):\n        super().__init__()\n        layout = QVBoxLayout()\n        # ===== Title =====\n        title = QLabel(\"Tenants Management\")\n        title.setStyleSheet(\"font-size: 20px; font-weight: bold;\")\n        layout.addWidget(title)\n        # ===== Table =====\n        self.table = QTableWidget()",
+        "peekOfCode": "class TenantsPage(QWidget):\n    def __init__(self):\n        super().__init__()\n        self.setStyleSheet(PAGE_STYLESHEET)\n        layout = QVBoxLayout()\n        layout.setContentsMargins(20, 20, 20, 20)\n        layout.setSpacing(12)\n        # ===== Title =====\n        title = QLabel(\"Tenants Management\")\n        title.setObjectName(\"pageTitle\")",
         "detail": "env.core.tenants",
         "documentation": {}
     },
@@ -844,7 +1236,7 @@
         "kind": 6,
         "importPath": "env.core.units",
         "description": "env.core.units",
-        "peekOfCode": "class UnitsPage(QWidget):\n    def __init__(self):\n        super().__init__()\n        layout = QVBoxLayout()\n        # ===== Title =====\n        title = QLabel(\" Units Management\")\n        title.setStyleSheet(\"font-size: 20px; font-weight: bold;\")\n        layout.addWidget(title)\n        # ===== Table =====\n        self.table = QTableWidget()",
+        "peekOfCode": "class UnitsPage(QWidget):\n    def __init__(self):\n        super().__init__()\n        self.setStyleSheet(PAGE_STYLESHEET)\n        layout = QVBoxLayout()\n        layout.setContentsMargins(20, 20, 20, 20)\n        layout.setSpacing(12)\n        # ===== Title =====\n        title = QLabel(\" Units Management\")\n        title.setObjectName(\"pageTitle\")",
         "detail": "env.core.units",
         "documentation": {}
     },
@@ -1123,7 +1515,7 @@
         "kind": 6,
         "importPath": "env.ui.dashboard",
         "description": "env.ui.dashboard",
-        "peekOfCode": "class Dashboard(QWidget):\n    def __init__(self):\n        super().__init__()\n        layout = QVBoxLayout()\n        title = QLabel(\"Rent Management Dashboard\")\n        title.setStyleSheet(\"font-size: 24px; font-weight: bold;\")\n        stats = QLabel(\n                \"Welcome!\\n\\n\"\n                \"• Total Properties: --\\n\"\n                \"• Occupied Units: --\\n\"",
+        "peekOfCode": "class Dashboard(QWidget):\n    def __init__(self):\n        super().__init__()\n        layout = QVBoxLayout()\n        layout.setContentsMargins(24, 24, 24, 24)\n        layout.setSpacing(16)\n        self.setStyleSheet(\n            f\"\"\"\n            QWidget {{\n                background: {WHITE};",
         "detail": "env.ui.dashboard",
         "documentation": {}
     },
@@ -1137,11 +1529,155 @@
         "documentation": {}
     },
     {
+        "label": "WHITE",
+        "kind": 5,
+        "importPath": "env.ui.theme",
+        "description": "env.ui.theme",
+        "peekOfCode": "WHITE = \"#ffffff\"\nGREEN_900 = \"#0f3d1e\"\nGREEN_700 = \"#1f7a3a\"\nGREEN_600 = \"#2e8b57\"\nGREEN_300 = \"#a5d6a7\"\nGREEN_200 = \"#c8e6c9\"\nGREEN_100 = \"#e8f5e9\"\nTEXT_MAIN = \"#17351f\"\nTEXT_MUTED = \"#2f5a3d\"\nCARD_BORDER = \"#d7ead9\"",
+        "detail": "env.ui.theme",
+        "documentation": {}
+    },
+    {
+        "label": "GREEN_900",
+        "kind": 5,
+        "importPath": "env.ui.theme",
+        "description": "env.ui.theme",
+        "peekOfCode": "GREEN_900 = \"#0f3d1e\"\nGREEN_700 = \"#1f7a3a\"\nGREEN_600 = \"#2e8b57\"\nGREEN_300 = \"#a5d6a7\"\nGREEN_200 = \"#c8e6c9\"\nGREEN_100 = \"#e8f5e9\"\nTEXT_MAIN = \"#17351f\"\nTEXT_MUTED = \"#2f5a3d\"\nCARD_BORDER = \"#d7ead9\"\nPAGE_STYLESHEET = f\"\"\"",
+        "detail": "env.ui.theme",
+        "documentation": {}
+    },
+    {
+        "label": "GREEN_700",
+        "kind": 5,
+        "importPath": "env.ui.theme",
+        "description": "env.ui.theme",
+        "peekOfCode": "GREEN_700 = \"#1f7a3a\"\nGREEN_600 = \"#2e8b57\"\nGREEN_300 = \"#a5d6a7\"\nGREEN_200 = \"#c8e6c9\"\nGREEN_100 = \"#e8f5e9\"\nTEXT_MAIN = \"#17351f\"\nTEXT_MUTED = \"#2f5a3d\"\nCARD_BORDER = \"#d7ead9\"\nPAGE_STYLESHEET = f\"\"\"\nQWidget {{",
+        "detail": "env.ui.theme",
+        "documentation": {}
+    },
+    {
+        "label": "GREEN_600",
+        "kind": 5,
+        "importPath": "env.ui.theme",
+        "description": "env.ui.theme",
+        "peekOfCode": "GREEN_600 = \"#2e8b57\"\nGREEN_300 = \"#a5d6a7\"\nGREEN_200 = \"#c8e6c9\"\nGREEN_100 = \"#e8f5e9\"\nTEXT_MAIN = \"#17351f\"\nTEXT_MUTED = \"#2f5a3d\"\nCARD_BORDER = \"#d7ead9\"\nPAGE_STYLESHEET = f\"\"\"\nQWidget {{\n    background: {WHITE};",
+        "detail": "env.ui.theme",
+        "documentation": {}
+    },
+    {
+        "label": "GREEN_300",
+        "kind": 5,
+        "importPath": "env.ui.theme",
+        "description": "env.ui.theme",
+        "peekOfCode": "GREEN_300 = \"#a5d6a7\"\nGREEN_200 = \"#c8e6c9\"\nGREEN_100 = \"#e8f5e9\"\nTEXT_MAIN = \"#17351f\"\nTEXT_MUTED = \"#2f5a3d\"\nCARD_BORDER = \"#d7ead9\"\nPAGE_STYLESHEET = f\"\"\"\nQWidget {{\n    background: {WHITE};\n    color: {TEXT_MAIN};",
+        "detail": "env.ui.theme",
+        "documentation": {}
+    },
+    {
+        "label": "GREEN_200",
+        "kind": 5,
+        "importPath": "env.ui.theme",
+        "description": "env.ui.theme",
+        "peekOfCode": "GREEN_200 = \"#c8e6c9\"\nGREEN_100 = \"#e8f5e9\"\nTEXT_MAIN = \"#17351f\"\nTEXT_MUTED = \"#2f5a3d\"\nCARD_BORDER = \"#d7ead9\"\nPAGE_STYLESHEET = f\"\"\"\nQWidget {{\n    background: {WHITE};\n    color: {TEXT_MAIN};\n    font-size: 13px;",
+        "detail": "env.ui.theme",
+        "documentation": {}
+    },
+    {
+        "label": "GREEN_100",
+        "kind": 5,
+        "importPath": "env.ui.theme",
+        "description": "env.ui.theme",
+        "peekOfCode": "GREEN_100 = \"#e8f5e9\"\nTEXT_MAIN = \"#17351f\"\nTEXT_MUTED = \"#2f5a3d\"\nCARD_BORDER = \"#d7ead9\"\nPAGE_STYLESHEET = f\"\"\"\nQWidget {{\n    background: {WHITE};\n    color: {TEXT_MAIN};\n    font-size: 13px;\n}}",
+        "detail": "env.ui.theme",
+        "documentation": {}
+    },
+    {
+        "label": "TEXT_MAIN",
+        "kind": 5,
+        "importPath": "env.ui.theme",
+        "description": "env.ui.theme",
+        "peekOfCode": "TEXT_MAIN = \"#17351f\"\nTEXT_MUTED = \"#2f5a3d\"\nCARD_BORDER = \"#d7ead9\"\nPAGE_STYLESHEET = f\"\"\"\nQWidget {{\n    background: {WHITE};\n    color: {TEXT_MAIN};\n    font-size: 13px;\n}}\nQLabel#pageTitle {{",
+        "detail": "env.ui.theme",
+        "documentation": {}
+    },
+    {
+        "label": "TEXT_MUTED",
+        "kind": 5,
+        "importPath": "env.ui.theme",
+        "description": "env.ui.theme",
+        "peekOfCode": "TEXT_MUTED = \"#2f5a3d\"\nCARD_BORDER = \"#d7ead9\"\nPAGE_STYLESHEET = f\"\"\"\nQWidget {{\n    background: {WHITE};\n    color: {TEXT_MAIN};\n    font-size: 13px;\n}}\nQLabel#pageTitle {{\n    font-size: 24px;",
+        "detail": "env.ui.theme",
+        "documentation": {}
+    },
+    {
+        "label": "CARD_BORDER",
+        "kind": 5,
+        "importPath": "env.ui.theme",
+        "description": "env.ui.theme",
+        "peekOfCode": "CARD_BORDER = \"#d7ead9\"\nPAGE_STYLESHEET = f\"\"\"\nQWidget {{\n    background: {WHITE};\n    color: {TEXT_MAIN};\n    font-size: 13px;\n}}\nQLabel#pageTitle {{\n    font-size: 24px;\n    font-weight: 700;",
+        "detail": "env.ui.theme",
+        "documentation": {}
+    },
+    {
+        "label": "PAGE_STYLESHEET",
+        "kind": 5,
+        "importPath": "env.ui.theme",
+        "description": "env.ui.theme",
+        "peekOfCode": "PAGE_STYLESHEET = f\"\"\"\nQWidget {{\n    background: {WHITE};\n    color: {TEXT_MAIN};\n    font-size: 13px;\n}}\nQLabel#pageTitle {{\n    font-size: 24px;\n    font-weight: 700;\n    color: {GREEN_900};",
+        "detail": "env.ui.theme",
+        "documentation": {}
+    },
+    {
+        "label": "PRIMARY_BUTTON_STYLE",
+        "kind": 5,
+        "importPath": "env.ui.theme",
+        "description": "env.ui.theme",
+        "peekOfCode": "PRIMARY_BUTTON_STYLE = f\"\"\"\nQPushButton {{\n    background: {GREEN_700};\n    color: {WHITE};\n    border: none;\n    border-radius: 9px;\n    padding: 8px 14px;\n    font-weight: 600;\n}}\nQPushButton:hover {{",
+        "detail": "env.ui.theme",
+        "documentation": {}
+    },
+    {
+        "label": "DANGER_BUTTON_STYLE",
+        "kind": 5,
+        "importPath": "env.ui.theme",
+        "description": "env.ui.theme",
+        "peekOfCode": "DANGER_BUTTON_STYLE = f\"\"\"\nQPushButton {{\n    background: {GREEN_900};\n    color: {WHITE};\n    border: none;\n    border-radius: 9px;\n    padding: 8px 14px;\n    font-weight: 600;\n}}\nQPushButton:hover {{",
+        "detail": "env.ui.theme",
+        "documentation": {}
+    },
+    {
+        "label": "SECONDARY_BUTTON_STYLE",
+        "kind": 5,
+        "importPath": "env.ui.theme",
+        "description": "env.ui.theme",
+        "peekOfCode": "SECONDARY_BUTTON_STYLE = f\"\"\"\nQPushButton {{\n    background: {GREEN_100};\n    color: {GREEN_900};\n    border: 1px solid {GREEN_300};\n    border-radius: 9px;\n    padding: 8px 14px;\n    font-weight: 600;\n}}\nQPushButton:hover {{",
+        "detail": "env.ui.theme",
+        "documentation": {}
+    },
+    {
+        "label": "NAV_BUTTON_STYLE",
+        "kind": 5,
+        "importPath": "env.ui.theme",
+        "description": "env.ui.theme",
+        "peekOfCode": "NAV_BUTTON_STYLE = f\"\"\"\nQPushButton {{\n    background: transparent;\n    color: {GREEN_100};\n    border: 1px solid transparent;\n    border-radius: 10px;\n    padding: 10px 12px;\n    text-align: left;\n    font-size: 13px;\n    font-weight: 600;",
+        "detail": "env.ui.theme",
+        "documentation": {}
+    },
+    {
+        "label": "MAIN_WINDOW_STYLE",
+        "kind": 5,
+        "importPath": "env.ui.theme",
+        "description": "env.ui.theme",
+        "peekOfCode": "MAIN_WINDOW_STYLE = f\"\"\"\nQMainWindow {{\n    background: {WHITE};\n}}\nQWidget#sidebar {{\n    background: {GREEN_900};\n    border-radius: 12px;\n}}\nQLabel#sidebarTitle {{\n    color: {GREEN_100};",
+        "detail": "env.ui.theme",
+        "documentation": {}
+    },
+    {
         "label": "MainWindow",
         "kind": 6,
         "importPath": "env.main",
         "description": "env.main",
-        "peekOfCode": "class MainWindow(QMainWindow):\n    def __init__(self):\n        super().__init__()\n        self.setWindowTitle(\"Rent Management System\")\n        self.resize(800, 600)\n        main_widget = QWidget()\n        main_layout = QHBoxLayout()\n        sidebar = QVBoxLayout()\n        btn_dashboard = QPushButton(\"Dashboard\")\n        btn_properties = QPushButton(\"Properties\")",
+        "peekOfCode": "class MainWindow(QMainWindow):\n    def __init__(self):\n        super().__init__()\n        self.setWindowTitle(\"Rent Management System\")\n        self.resize(1180, 760)\n        self.setStyleSheet(MAIN_WINDOW_STYLE)\n        main_widget = QWidget()\n        main_layout = QHBoxLayout()\n        main_layout.setContentsMargins(14, 14, 14, 14)\n        main_layout.setSpacing(12)",
         "detail": "env.main",
         "documentation": {}
     }

@@ -46,6 +46,22 @@ def _migrate_properties_schema(cursor):
     cursor.execute("UPDATE properties SET address = '' WHERE address IS NULL")
     cursor.execute("UPDATE properties SET description = '' WHERE description IS NULL")
 
+
+def _migrate_payments_schema(cursor):
+    columns = set(_get_table_columns(cursor, "payments"))
+
+    # Older databases may not have the current field used by the payments UI.
+    if "month_covered" not in columns:
+        cursor.execute("ALTER TABLE payments ADD COLUMN month_covered TEXT")
+
+    columns = set(_get_table_columns(cursor, "payments"))
+    if "payment_date" not in columns:
+        cursor.execute("ALTER TABLE payments ADD COLUMN payment_date TEXT")
+
+    cursor.execute(
+        "UPDATE payments SET month_covered = '' WHERE month_covered IS NULL"
+    )
+
 def initialize_database():
     conn = get_connection()
     cursor = conn.cursor()
@@ -89,9 +105,11 @@ def initialize_database():
             tenant_id INTEGER,
             amount REAL,
             payment_date TEXT,
+            month_covered TEXT,
             notes TEXT
         )
     """)
+    _migrate_payments_schema(cursor)
     conn.commit()
     conn.close()
 

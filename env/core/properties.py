@@ -10,17 +10,26 @@ from database.db import (
     update_property,
     delete_property,
 )
+from ui.theme import (
+    DANGER_BUTTON_STYLE,
+    PAGE_STYLESHEET,
+    PRIMARY_BUTTON_STYLE,
+    SECONDARY_BUTTON_STYLE,
+)
 
 
 class PropertiesPage(QWidget):
     def __init__(self):
         super().__init__()
+        self.setStyleSheet(PAGE_STYLESHEET)
 
         layout = QVBoxLayout()
+        layout.setContentsMargins(20, 20, 20, 20)
+        layout.setSpacing(12)
 
         # ===== Title =====
         title = QLabel("🏢 Properties Management")
-        title.setStyleSheet("font-size: 20px; font-weight: bold;")
+        title.setObjectName("pageTitle")
         layout.addWidget(title)
 
         # ===== Table =====
@@ -59,6 +68,11 @@ class PropertiesPage(QWidget):
         self.update_btn = QPushButton("Update")
         self.delete_btn = QPushButton("Delete")
         self.clear_btn = QPushButton("Clear")
+
+        self.add_btn.setStyleSheet(PRIMARY_BUTTON_STYLE)
+        self.update_btn.setStyleSheet(PRIMARY_BUTTON_STYLE)
+        self.delete_btn.setStyleSheet(DANGER_BUTTON_STYLE)
+        self.clear_btn.setStyleSheet(SECONDARY_BUTTON_STYLE)
 
         btn_layout.addWidget(self.add_btn)
         btn_layout.addWidget(self.update_btn)

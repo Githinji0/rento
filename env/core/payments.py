@@ -6,7 +6,7 @@ from PySide6.QtWidgets import (
 )
 from PySide6.QtCore import QDate
 
-from database import (
+from database.db import (
     get_payments,
     add_payment,
     delete_payment,
@@ -14,17 +14,26 @@ from database import (
     get_tenant_rent,
     get_total_paid,
 )
+from ui.theme import (
+    DANGER_BUTTON_STYLE,
+    PAGE_STYLESHEET,
+    PRIMARY_BUTTON_STYLE,
+    SECONDARY_BUTTON_STYLE,
+)
 
 
 class PaymentsPage(QWidget):
     def __init__(self):
         super().__init__()
+        self.setStyleSheet(PAGE_STYLESHEET)
 
         layout = QVBoxLayout()
+        layout.setContentsMargins(20, 20, 20, 20)
+        layout.setSpacing(12)
 
         # ===== Title =====
         title = QLabel("💰 Payments Management")
-        title.setStyleSheet("font-size: 20px; font-weight: bold;")
+        title.setObjectName("pageTitle")
         layout.addWidget(title)
 
         # ===== Table =====
@@ -56,12 +65,16 @@ class PaymentsPage(QWidget):
         # Arrears label
         self.arrears_label = QLabel("Arrears: KES 0")
 
-        form_layout.addWidget(QLabel("Tenant"))
+        tenant_label = QLabel("Tenant")
+        tenant_label.setObjectName("fieldLabel")
+        form_layout.addWidget(tenant_label)
         form_layout.addWidget(self.tenant_combo)
         form_layout.addWidget(self.amount_input)
         form_layout.addWidget(self.date_input)
         form_layout.addWidget(self.month_input)
         form_layout.addWidget(self.arrears_label)
+
+        self.arrears_label.setObjectName("fieldLabel")
 
         layout.addLayout(form_layout)
 
@@ -71,6 +84,10 @@ class PaymentsPage(QWidget):
         self.add_btn = QPushButton("➕ Add Payment")
         self.delete_btn = QPushButton("🗑️ Delete")
         self.refresh_btn = QPushButton("🔄 Refresh")
+
+        self.add_btn.setStyleSheet(PRIMARY_BUTTON_STYLE)
+        self.delete_btn.setStyleSheet(DANGER_BUTTON_STYLE)
+        self.refresh_btn.setStyleSheet(SECONDARY_BUTTON_STYLE)
 
         btn_layout.addWidget(self.add_btn)
         btn_layout.addWidget(self.delete_btn)
