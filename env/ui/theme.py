@@ -144,4 +144,19 @@ QLabel#sidebarTitle {{
     font-weight: 700;
     padding: 4px 2px 10px 2px;
 }}
+QLabel#sidebarSubtitle {{
+    color: {GREEN_300};
+    font-size: 12px;
+    font-weight: 600;
+    padding: 0 2px 12px 2px;
+}}
+QLabel#roleBadge {{
+    background: {GREEN_200};
+    color: {GREEN_900};
+    border-radius: 8px;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 8px;
+    margin: 0 2px 10px 2px;
+}}
 """

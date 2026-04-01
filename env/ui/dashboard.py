@@ -89,6 +89,8 @@ class Dashboard(QWidget):
 
         scroll = QScrollArea()
         scroll.setWidgetResizable(True)
+        scroll.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        scroll.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
         scroll.setStyleSheet("border: none; background: transparent;")
 
         content = QWidget()
@@ -335,14 +337,17 @@ class Dashboard(QWidget):
 
         occupancy_series = QPieSeries()
         occupancy_series.setHoleSize(0.4)
-        if units > 0:
+        has_occupancy_data = units > 0
+
+        if has_occupancy_data:
             occupancy_series.append("Occupied", occupied)
             occupancy_series.append("Vacant", vacant)
         else:
             occupancy_series.append("No Units", 1)
+            self.occupancy_subtitle.setText("No unit occupancy data available yet")
 
         for pie_slice in occupancy_series.slices():
-            pie_slice.setLabelVisible(True)
+            pie_slice.setLabelVisible(has_occupancy_data)
             pie_slice.setLabelColor(QColor(TEXT_MAIN))
             pie_slice.setBorderColor(QColor(WHITE))
             pie_slice.setBorderWidth(1)
@@ -362,7 +367,7 @@ class Dashboard(QWidget):
         occupancy_chart.setBackgroundBrush(QColor(WHITE))
         occupancy_chart.setPlotAreaBackgroundBrush(QColor(WHITE))
         occupancy_chart.setPlotAreaBackgroundVisible(True)
-        occupancy_chart.legend().setVisible(True)
+        occupancy_chart.legend().setVisible(has_occupancy_data)
         occupancy_chart.legend().setAlignment(Qt.AlignBottom)
         occupancy_chart.legend().setLabelColor(QColor(TEXT_MUTED))
         occupancy_chart.legend().setFont(QFont("Segoe UI", 9))

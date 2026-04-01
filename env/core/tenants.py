@@ -22,8 +22,9 @@ from ui.theme import (
 
 
 class TenantsPage(QWidget):
-    def __init__(self):
+    def __init__(self, can_edit=True):
         super().__init__()
+        self.can_edit = can_edit
         self.setStyleSheet(PAGE_STYLESHEET)
 
         layout = QVBoxLayout()
@@ -111,9 +112,29 @@ class TenantsPage(QWidget):
         self.delete_btn.clicked.connect(self.delete_tenant)
         self.clear_btn.clicked.connect(self.clear_form)
 
+        if not self.can_edit:
+            self._set_read_only_mode()
+
         self.selected_id = None
 
         self.load_data()
+
+    def _set_read_only_mode(self):
+        self.add_btn.setEnabled(False)
+        self.update_btn.setEnabled(False)
+        self.delete_btn.setEnabled(False)
+        self.name_input.setReadOnly(True)
+        self.phone_input.setReadOnly(True)
+        self.email_input.setReadOnly(True)
+        self.deposit_input.setReadOnly(True)
+        self.unit_combo.setEnabled(False)
+        self.move_in_input.setEnabled(False)
+
+    def _guard_edit(self):
+        if self.can_edit:
+            return True
+        QMessageBox.warning(self, "Access Denied", "You have read-only access")
+        return False
 
     # =============================
     # Load Units into Combo
@@ -158,6 +179,8 @@ class TenantsPage(QWidget):
     # Add Tenant
     # =============================
     def add_tenant(self):
+        if not self._guard_edit():
+            return
         name = self.name_input.text()
         phone = self.phone_input.text()
         email = self.email_input.text()
@@ -177,6 +200,8 @@ class TenantsPage(QWidget):
     # Update Tenant
     # =============================
     def update_tenant(self):
+        if not self._guard_edit():
+            return
         if not self.selected_id:
             QMessageBox.warning(self, "Error", "Select a tenant first")
             return
@@ -201,6 +226,8 @@ class TenantsPage(QWidget):
     # Delete Tenant
     # =============================
     def delete_tenant(self):
+        if not self._guard_edit():
+            return
         if not self.selected_id:
             QMessageBox.warning(self, "Error", "Select a tenant first")
             return

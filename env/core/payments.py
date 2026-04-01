@@ -23,8 +23,9 @@ from ui.theme import (
 
 
 class PaymentsPage(QWidget):
-    def __init__(self):
+    def __init__(self, can_edit=True):
         super().__init__()
+        self.can_edit = can_edit
         self.setStyleSheet(PAGE_STYLESHEET)
 
         layout = QVBoxLayout()
@@ -103,10 +104,27 @@ class PaymentsPage(QWidget):
         self.refresh_btn.clicked.connect(self.refresh_data)
         self.tenant_combo.currentIndexChanged.connect(self.update_arrears)
 
+        if not self.can_edit:
+            self._set_read_only_mode()
+
         self.selected_id = None
 
         self.load_data()
         self.update_arrears()
+
+    def _set_read_only_mode(self):
+        self.add_btn.setEnabled(False)
+        self.delete_btn.setEnabled(False)
+        self.tenant_combo.setEnabled(False)
+        self.amount_input.setReadOnly(True)
+        self.date_input.setEnabled(False)
+        self.month_input.setReadOnly(True)
+
+    def _guard_edit(self):
+        if self.can_edit:
+            return True
+        QMessageBox.warning(self, "Access Denied", "You have read-only access")
+        return False
 
     # =============================
     # Load Tenants
@@ -146,6 +164,8 @@ class PaymentsPage(QWidget):
     # Add Payment
     # =============================
     def add_payment(self):
+        if not self._guard_edit():
+            return
         tenant_id = self.tenant_combo.currentData()
         amount = self.amount_input.text()
         date = self.date_input.date().toString("yyyy-MM-dd")
@@ -165,6 +185,8 @@ class PaymentsPage(QWidget):
     # Delete Payment
     # =============================
     def delete_payment(self):
+        if not self._guard_edit():
+            return
         selected = self.table.currentRow()
 
         if selected < 0:

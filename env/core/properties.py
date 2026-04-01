@@ -19,8 +19,9 @@ from ui.theme import (
 
 
 class PropertiesPage(QWidget):
-    def __init__(self):
+    def __init__(self, can_edit=True):
         super().__init__()
+        self.can_edit = can_edit
         self.setStyleSheet(PAGE_STYLESHEET)
 
         layout = QVBoxLayout()
@@ -89,9 +90,26 @@ class PropertiesPage(QWidget):
         self.delete_btn.clicked.connect(self.delete_property)
         self.clear_btn.clicked.connect(self.clear_form)
 
+        if not self.can_edit:
+            self._set_read_only_mode()
+
         self.selected_id = None
 
         self.load_data()
+
+    def _set_read_only_mode(self):
+        self.add_btn.setEnabled(False)
+        self.update_btn.setEnabled(False)
+        self.delete_btn.setEnabled(False)
+        self.name_input.setReadOnly(True)
+        self.address_input.setReadOnly(True)
+        self.desc_input.setReadOnly(True)
+
+    def _guard_edit(self):
+        if self.can_edit:
+            return True
+        QMessageBox.warning(self, "Access Denied", "You have read-only access")
+        return False
 
     # =============================
     # Load Table Data
@@ -121,6 +139,8 @@ class PropertiesPage(QWidget):
     # Add Property
     # =============================
     def add_property(self):
+        if not self._guard_edit():
+            return
         name = self.name_input.text()
         address = self.address_input.text()
         desc = self.desc_input.toPlainText()
@@ -137,6 +157,8 @@ class PropertiesPage(QWidget):
     # Update Property
     # =============================
     def update_property(self):
+        if not self._guard_edit():
+            return
         if not self.selected_id:
             QMessageBox.warning(self, "Error", "Select a property first")
             return
@@ -152,6 +174,8 @@ class PropertiesPage(QWidget):
     # Delete Property
     # =============================
     def delete_property(self):
+        if not self._guard_edit():
+            return
         if not self.selected_id:
             QMessageBox.warning(self, "Error", "Select a property first")
             return

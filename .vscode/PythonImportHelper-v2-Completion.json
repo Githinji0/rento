@@ -1,5 +1,158 @@
 [
     {
+        "label": "sqlite3",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sqlite3",
+        "description": "sqlite3",
+        "detail": "sqlite3",
+        "documentation": {}
+    },
+    {
+        "label": "Signal",
+        "importPath": "PySide6.QtCore",
+        "description": "PySide6.QtCore",
+        "isExtraImport": true,
+        "detail": "PySide6.QtCore",
+        "documentation": {}
+    },
+    {
+        "label": "QDate",
+        "importPath": "PySide6.QtCore",
+        "description": "PySide6.QtCore",
+        "isExtraImport": true,
+        "detail": "PySide6.QtCore",
+        "documentation": {}
+    },
+    {
+        "label": "Qt",
+        "importPath": "PySide6.QtCore",
+        "description": "PySide6.QtCore",
+        "isExtraImport": true,
+        "detail": "PySide6.QtCore",
+        "documentation": {}
+    },
+    {
+        "label": "Signal",
+        "importPath": "PySide6.QtCore",
+        "description": "PySide6.QtCore",
+        "isExtraImport": true,
+        "detail": "PySide6.QtCore",
+        "documentation": {}
+    },
+    {
+        "label": "Qt",
+        "importPath": "PySide6.QtCore",
+        "description": "PySide6.QtCore",
+        "isExtraImport": true,
+        "detail": "PySide6.QtCore",
+        "documentation": {}
+    },
+    {
+        "label": "QDate",
+        "importPath": "PySide6.QtCore",
+        "description": "PySide6.QtCore",
+        "isExtraImport": true,
+        "detail": "PySide6.QtCore",
+        "documentation": {}
+    },
+    {
+        "label": "Qt",
+        "importPath": "PySide6.QtCore",
+        "description": "PySide6.QtCore",
+        "isExtraImport": true,
+        "detail": "PySide6.QtCore",
+        "documentation": {}
+    },
+    {
+        "label": "Qt",
+        "importPath": "PySide6.QtCore",
+        "description": "PySide6.QtCore",
+        "isExtraImport": true,
+        "detail": "PySide6.QtCore",
+        "documentation": {}
+    },
+    {
+        "label": "QComboBox",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QFormLayout",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QHBoxLayout",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QLabel",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QLineEdit",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QMessageBox",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QPushButton",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QStackedWidget",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QVBoxLayout",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QWidget",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
         "label": "QWidget",
         "importPath": "PySide6.QtWidgets",
         "description": "PySide6.QtWidgets",
@@ -128,6 +281,94 @@
         "documentation": {}
     },
     {
+        "label": "QCheckBox",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QHBoxLayout",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QLabel",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QLineEdit",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QMessageBox",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QPushButton",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QTableWidget",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QTableWidgetItem",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QTextEdit",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QVBoxLayout",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QWidget",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
         "label": "QWidget",
         "importPath": "PySide6.QtWidgets",
         "description": "PySide6.QtWidgets",
@@ -201,6 +442,86 @@
     },
     {
         "label": "QMessageBox",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QFileDialog",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QGridLayout",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QHBoxLayout",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QLabel",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QMessageBox",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QPushButton",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QTableWidget",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QTableWidgetItem",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QVBoxLayout",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QWidget",
         "importPath": "PySide6.QtWidgets",
         "description": "PySide6.QtWidgets",
         "isExtraImport": true,
@@ -520,83 +841,19 @@
         "documentation": {}
     },
     {
-        "label": "count_properties",
-        "importPath": "database",
-        "description": "database",
+        "label": "create_auth_user",
+        "importPath": "database.db",
+        "description": "database.db",
         "isExtraImport": true,
-        "detail": "database",
+        "detail": "database.db",
         "documentation": {}
     },
     {
-        "label": "count_units",
-        "importPath": "database",
-        "description": "database",
+        "label": "get_auth_user_by_identifier",
+        "importPath": "database.db",
+        "description": "database.db",
         "isExtraImport": true,
-        "detail": "database",
-        "documentation": {}
-    },
-    {
-        "label": "count_occupied_units",
-        "importPath": "database",
-        "description": "database",
-        "isExtraImport": true,
-        "detail": "database",
-        "documentation": {}
-    },
-    {
-        "label": "count_vacant_units",
-        "importPath": "database",
-        "description": "database",
-        "isExtraImport": true,
-        "detail": "database",
-        "documentation": {}
-    },
-    {
-        "label": "count_tenants",
-        "importPath": "database",
-        "description": "database",
-        "isExtraImport": true,
-        "detail": "database",
-        "documentation": {}
-    },
-    {
-        "label": "total_income",
-        "importPath": "database",
-        "description": "database",
-        "isExtraImport": true,
-        "detail": "database",
-        "documentation": {}
-    },
-    {
-        "label": "total_arrears",
-        "importPath": "database",
-        "description": "database",
-        "isExtraImport": true,
-        "detail": "database",
-        "documentation": {}
-    },
-    {
-        "label": "QDate",
-        "importPath": "PySide6.QtCore",
-        "description": "PySide6.QtCore",
-        "isExtraImport": true,
-        "detail": "PySide6.QtCore",
-        "documentation": {}
-    },
-    {
-        "label": "QDate",
-        "importPath": "PySide6.QtCore",
-        "description": "PySide6.QtCore",
-        "isExtraImport": true,
-        "detail": "PySide6.QtCore",
-        "documentation": {}
-    },
-    {
-        "label": "Qt",
-        "importPath": "PySide6.QtCore",
-        "description": "PySide6.QtCore",
-        "isExtraImport": true,
-        "detail": "PySide6.QtCore",
+        "detail": "database.db",
         "documentation": {}
     },
     {
@@ -648,6 +905,62 @@
         "documentation": {}
     },
     {
+        "label": "add_user_profile",
+        "importPath": "database.db",
+        "description": "database.db",
+        "isExtraImport": true,
+        "detail": "database.db",
+        "documentation": {}
+    },
+    {
+        "label": "delete_user_profile",
+        "importPath": "database.db",
+        "description": "database.db",
+        "isExtraImport": true,
+        "detail": "database.db",
+        "documentation": {}
+    },
+    {
+        "label": "get_auth_user_by_id",
+        "importPath": "database.db",
+        "description": "database.db",
+        "isExtraImport": true,
+        "detail": "database.db",
+        "documentation": {}
+    },
+    {
+        "label": "get_user_profiles",
+        "importPath": "database.db",
+        "description": "database.db",
+        "isExtraImport": true,
+        "detail": "database.db",
+        "documentation": {}
+    },
+    {
+        "label": "set_active_user_profile",
+        "importPath": "database.db",
+        "description": "database.db",
+        "isExtraImport": true,
+        "detail": "database.db",
+        "documentation": {}
+    },
+    {
+        "label": "update_auth_user_self",
+        "importPath": "database.db",
+        "description": "database.db",
+        "isExtraImport": true,
+        "detail": "database.db",
+        "documentation": {}
+    },
+    {
+        "label": "update_user_profile",
+        "importPath": "database.db",
+        "description": "database.db",
+        "isExtraImport": true,
+        "detail": "database.db",
+        "documentation": {}
+    },
+    {
         "label": "get_properties",
         "importPath": "database.db",
         "description": "database.db",
@@ -673,6 +986,46 @@
     },
     {
         "label": "delete_property",
+        "importPath": "database.db",
+        "description": "database.db",
+        "isExtraImport": true,
+        "detail": "database.db",
+        "documentation": {}
+    },
+    {
+        "label": "get_monthly_income_report",
+        "importPath": "database.db",
+        "description": "database.db",
+        "isExtraImport": true,
+        "detail": "database.db",
+        "documentation": {}
+    },
+    {
+        "label": "get_property_occupancy_report",
+        "importPath": "database.db",
+        "description": "database.db",
+        "isExtraImport": true,
+        "detail": "database.db",
+        "documentation": {}
+    },
+    {
+        "label": "get_tenant_arrears_report",
+        "importPath": "database.db",
+        "description": "database.db",
+        "isExtraImport": true,
+        "detail": "database.db",
+        "documentation": {}
+    },
+    {
+        "label": "total_arrears",
+        "importPath": "database.db",
+        "description": "database.db",
+        "isExtraImport": true,
+        "detail": "database.db",
+        "documentation": {}
+    },
+    {
+        "label": "total_income",
         "importPath": "database.db",
         "description": "database.db",
         "isExtraImport": true,
@@ -840,6 +1193,46 @@
         "documentation": {}
     },
     {
+        "label": "close_auth_session",
+        "importPath": "database.db",
+        "description": "database.db",
+        "isExtraImport": true,
+        "detail": "database.db",
+        "documentation": {}
+    },
+    {
+        "label": "create_auth_session",
+        "importPath": "database.db",
+        "description": "database.db",
+        "isExtraImport": true,
+        "detail": "database.db",
+        "documentation": {}
+    },
+    {
+        "label": "update_auth_last_login",
+        "importPath": "database.db",
+        "description": "database.db",
+        "isExtraImport": true,
+        "detail": "database.db",
+        "documentation": {}
+    },
+    {
+        "label": "get_active_user_profile",
+        "importPath": "database.db",
+        "description": "database.db",
+        "isExtraImport": true,
+        "detail": "database.db",
+        "documentation": {}
+    },
+    {
+        "label": "get_auth_user_by_id",
+        "importPath": "database.db",
+        "description": "database.db",
+        "isExtraImport": true,
+        "detail": "database.db",
+        "documentation": {}
+    },
+    {
         "label": "initialize_database",
         "importPath": "database.db",
         "description": "database.db",
@@ -848,6 +1241,54 @@
         "documentation": {}
     },
     {
+        "label": "PRIMARY_BUTTON_STYLE",
+        "importPath": "ui.theme",
+        "description": "ui.theme",
+        "isExtraImport": true,
+        "detail": "ui.theme",
+        "documentation": {}
+    },
+    {
+        "label": "SECONDARY_BUTTON_STYLE",
+        "importPath": "ui.theme",
+        "description": "ui.theme",
+        "isExtraImport": true,
+        "detail": "ui.theme",
+        "documentation": {}
+    },
+    {
+        "label": "DANGER_BUTTON_STYLE",
+        "importPath": "ui.theme",
+        "description": "ui.theme",
+        "isExtraImport": true,
+        "detail": "ui.theme",
+        "documentation": {}
+    },
+    {
+        "label": "PAGE_STYLESHEET",
+        "importPath": "ui.theme",
+        "description": "ui.theme",
+        "isExtraImport": true,
+        "detail": "ui.theme",
+        "documentation": {}
+    },
+    {
+        "label": "PRIMARY_BUTTON_STYLE",
+        "importPath": "ui.theme",
+        "description": "ui.theme",
+        "isExtraImport": true,
+        "detail": "ui.theme",
+        "documentation": {}
+    },
+    {
+        "label": "SECONDARY_BUTTON_STYLE",
+        "importPath": "ui.theme",
+        "description": "ui.theme",
+        "isExtraImport": true,
+        "detail": "ui.theme",
+        "documentation": {}
+    },
+    {
         "label": "DANGER_BUTTON_STYLE",
         "importPath": "ui.theme",
         "description": "ui.theme",
@@ -905,6 +1346,86 @@
     },
     {
         "label": "SECONDARY_BUTTON_STYLE",
+        "importPath": "ui.theme",
+        "description": "ui.theme",
+        "isExtraImport": true,
+        "detail": "ui.theme",
+        "documentation": {}
+    },
+    {
+        "label": "CARD_BORDER",
+        "importPath": "ui.theme",
+        "description": "ui.theme",
+        "isExtraImport": true,
+        "detail": "ui.theme",
+        "documentation": {}
+    },
+    {
+        "label": "GREEN_100",
+        "importPath": "ui.theme",
+        "description": "ui.theme",
+        "isExtraImport": true,
+        "detail": "ui.theme",
+        "documentation": {}
+    },
+    {
+        "label": "GREEN_200",
+        "importPath": "ui.theme",
+        "description": "ui.theme",
+        "isExtraImport": true,
+        "detail": "ui.theme",
+        "documentation": {}
+    },
+    {
+        "label": "GREEN_700",
+        "importPath": "ui.theme",
+        "description": "ui.theme",
+        "isExtraImport": true,
+        "detail": "ui.theme",
+        "documentation": {}
+    },
+    {
+        "label": "GREEN_900",
+        "importPath": "ui.theme",
+        "description": "ui.theme",
+        "isExtraImport": true,
+        "detail": "ui.theme",
+        "documentation": {}
+    },
+    {
+        "label": "PAGE_STYLESHEET",
+        "importPath": "ui.theme",
+        "description": "ui.theme",
+        "isExtraImport": true,
+        "detail": "ui.theme",
+        "documentation": {}
+    },
+    {
+        "label": "PRIMARY_BUTTON_STYLE",
+        "importPath": "ui.theme",
+        "description": "ui.theme",
+        "isExtraImport": true,
+        "detail": "ui.theme",
+        "documentation": {}
+    },
+    {
+        "label": "TEXT_MAIN",
+        "importPath": "ui.theme",
+        "description": "ui.theme",
+        "isExtraImport": true,
+        "detail": "ui.theme",
+        "documentation": {}
+    },
+    {
+        "label": "TEXT_MUTED",
+        "importPath": "ui.theme",
+        "description": "ui.theme",
+        "isExtraImport": true,
+        "detail": "ui.theme",
+        "documentation": {}
+    },
+    {
+        "label": "WHITE",
         "importPath": "ui.theme",
         "description": "ui.theme",
         "isExtraImport": true,
@@ -1072,60 +1593,140 @@
         "documentation": {}
     },
     {
-        "label": "sqlite3",
+        "label": "SECONDARY_BUTTON_STYLE",
+        "importPath": "ui.theme",
+        "description": "ui.theme",
+        "isExtraImport": true,
+        "detail": "ui.theme",
+        "documentation": {}
+    },
+    {
+        "label": "hash_password",
+        "importPath": "utils.security",
+        "description": "utils.security",
+        "isExtraImport": true,
+        "detail": "utils.security",
+        "documentation": {}
+    },
+    {
+        "label": "verify_password",
+        "importPath": "utils.security",
+        "description": "utils.security",
+        "isExtraImport": true,
+        "detail": "utils.security",
+        "documentation": {}
+    },
+    {
+        "label": "count_properties",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "count_units",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "count_occupied_units",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "count_vacant_units",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "count_tenants",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "total_income",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "total_arrears",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "csv",
         "kind": 6,
         "isExtraImport": true,
-        "importPath": "sqlite3",
-        "description": "sqlite3",
-        "detail": "sqlite3",
+        "importPath": "csv",
+        "description": "csv",
+        "detail": "csv",
         "documentation": {}
     },
     {
-        "label": "date",
-        "importPath": "datetime",
-        "description": "datetime",
+        "label": "QBarCategoryAxis",
+        "importPath": "PySide6.QtCharts",
+        "description": "PySide6.QtCharts",
         "isExtraImport": true,
-        "detail": "datetime",
+        "detail": "PySide6.QtCharts",
         "documentation": {}
     },
     {
-        "label": "datetime",
-        "importPath": "datetime",
-        "description": "datetime",
+        "label": "QBarSeries",
+        "importPath": "PySide6.QtCharts",
+        "description": "PySide6.QtCharts",
         "isExtraImport": true,
-        "detail": "datetime",
+        "detail": "PySide6.QtCharts",
         "documentation": {}
     },
     {
-        "label": "QColor",
-        "importPath": "PySide6.QtGui",
-        "description": "PySide6.QtGui",
+        "label": "QBarSet",
+        "importPath": "PySide6.QtCharts",
+        "description": "PySide6.QtCharts",
         "isExtraImport": true,
-        "detail": "PySide6.QtGui",
+        "detail": "PySide6.QtCharts",
         "documentation": {}
     },
     {
-        "label": "QFont",
-        "importPath": "PySide6.QtGui",
-        "description": "PySide6.QtGui",
+        "label": "QChart",
+        "importPath": "PySide6.QtCharts",
+        "description": "PySide6.QtCharts",
         "isExtraImport": true,
-        "detail": "PySide6.QtGui",
+        "detail": "PySide6.QtCharts",
         "documentation": {}
     },
     {
-        "label": "QPainter",
-        "importPath": "PySide6.QtGui",
-        "description": "PySide6.QtGui",
+        "label": "QChartView",
+        "importPath": "PySide6.QtCharts",
+        "description": "PySide6.QtCharts",
         "isExtraImport": true,
-        "detail": "PySide6.QtGui",
+        "detail": "PySide6.QtCharts",
         "documentation": {}
     },
     {
-        "label": "QPen",
-        "importPath": "PySide6.QtGui",
-        "description": "PySide6.QtGui",
+        "label": "QValueAxis",
+        "importPath": "PySide6.QtCharts",
+        "description": "PySide6.QtCharts",
         "isExtraImport": true,
-        "detail": "PySide6.QtGui",
+        "detail": "PySide6.QtCharts",
         "documentation": {}
     },
     {
@@ -1185,6 +1786,86 @@
         "documentation": {}
     },
     {
+        "label": "QColor",
+        "importPath": "PySide6.QtGui",
+        "description": "PySide6.QtGui",
+        "isExtraImport": true,
+        "detail": "PySide6.QtGui",
+        "documentation": {}
+    },
+    {
+        "label": "QFont",
+        "importPath": "PySide6.QtGui",
+        "description": "PySide6.QtGui",
+        "isExtraImport": true,
+        "detail": "PySide6.QtGui",
+        "documentation": {}
+    },
+    {
+        "label": "QPainter",
+        "importPath": "PySide6.QtGui",
+        "description": "PySide6.QtGui",
+        "isExtraImport": true,
+        "detail": "PySide6.QtGui",
+        "documentation": {}
+    },
+    {
+        "label": "QPen",
+        "importPath": "PySide6.QtGui",
+        "description": "PySide6.QtGui",
+        "isExtraImport": true,
+        "detail": "PySide6.QtGui",
+        "documentation": {}
+    },
+    {
+        "label": "QColor",
+        "importPath": "PySide6.QtGui",
+        "description": "PySide6.QtGui",
+        "isExtraImport": true,
+        "detail": "PySide6.QtGui",
+        "documentation": {}
+    },
+    {
+        "label": "QFont",
+        "importPath": "PySide6.QtGui",
+        "description": "PySide6.QtGui",
+        "isExtraImport": true,
+        "detail": "PySide6.QtGui",
+        "documentation": {}
+    },
+    {
+        "label": "QPainter",
+        "importPath": "PySide6.QtGui",
+        "description": "PySide6.QtGui",
+        "isExtraImport": true,
+        "detail": "PySide6.QtGui",
+        "documentation": {}
+    },
+    {
+        "label": "QPen",
+        "importPath": "PySide6.QtGui",
+        "description": "PySide6.QtGui",
+        "isExtraImport": true,
+        "detail": "PySide6.QtGui",
+        "documentation": {}
+    },
+    {
+        "label": "date",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
         "label": "sys",
         "kind": 6,
         "isExtraImport": true,
@@ -1227,11 +1908,46 @@
         "documentation": {}
     },
     {
+        "label": "hashlib",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "hashlib",
+        "description": "hashlib",
+        "detail": "hashlib",
+        "documentation": {}
+    },
+    {
+        "label": "hmac",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "hmac",
+        "description": "hmac",
+        "detail": "hmac",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
         "label": "Dashboard",
         "importPath": "ui.dashboard",
         "description": "ui.dashboard",
         "isExtraImport": true,
         "detail": "ui.dashboard",
+        "documentation": {}
+    },
+    {
+        "label": "AuthWindow",
+        "importPath": "core.auth",
+        "description": "core.auth",
+        "isExtraImport": true,
+        "detail": "core.auth",
         "documentation": {}
     },
     {
@@ -1267,6 +1983,63 @@
         "documentation": {}
     },
     {
+        "label": "ReportsPage",
+        "importPath": "core.reports",
+        "description": "core.reports",
+        "isExtraImport": true,
+        "detail": "core.reports",
+        "documentation": {}
+    },
+    {
+        "label": "ProfilePage",
+        "importPath": "core.profile",
+        "description": "core.profile",
+        "isExtraImport": true,
+        "detail": "core.profile",
+        "documentation": {}
+    },
+    {
+        "label": "can_access_page",
+        "importPath": "utils.permissions",
+        "description": "utils.permissions",
+        "isExtraImport": true,
+        "detail": "utils.permissions",
+        "documentation": {}
+    },
+    {
+        "label": "get_permissions_for_role",
+        "importPath": "utils.permissions",
+        "description": "utils.permissions",
+        "isExtraImport": true,
+        "detail": "utils.permissions",
+        "documentation": {}
+    },
+    {
+        "label": "normalize_role",
+        "importPath": "utils.permissions",
+        "description": "utils.permissions",
+        "isExtraImport": true,
+        "detail": "utils.permissions",
+        "documentation": {}
+    },
+    {
+        "label": "SessionManager",
+        "importPath": "utils.session",
+        "description": "utils.session",
+        "isExtraImport": true,
+        "detail": "utils.session",
+        "documentation": {}
+    },
+    {
+        "label": "AuthWindow",
+        "kind": 6,
+        "importPath": "env.core.auth",
+        "description": "env.core.auth",
+        "peekOfCode": "class AuthWindow(QWidget):\n    authenticated = Signal(dict)\n    def __init__(self):\n        super().__init__()\n        self.setWindowTitle(\"Rento Login\")\n        self.resize(460, 420)\n        self.setStyleSheet(\n            \"\"\"\n            QWidget { background: #ffffff; color: #17351f; font-size: 13px; }\n            QLabel#title { font-size: 24px; font-weight: 700; color: #0f3d1e; }",
+        "detail": "env.core.auth",
+        "documentation": {}
+    },
+    {
         "label": "StatCard",
         "kind": 6,
         "importPath": "env.core.dashboard",
@@ -1289,8 +2062,17 @@
         "kind": 6,
         "importPath": "env.core.payments",
         "description": "env.core.payments",
-        "peekOfCode": "class PaymentsPage(QWidget):\n    def __init__(self):\n        super().__init__()\n        self.setStyleSheet(PAGE_STYLESHEET)\n        layout = QVBoxLayout()\n        layout.setContentsMargins(20, 20, 20, 20)\n        layout.setSpacing(12)\n        # ===== Title =====\n        title = QLabel(\" Payments Management\")\n        title.setObjectName(\"pageTitle\")",
+        "peekOfCode": "class PaymentsPage(QWidget):\n    def __init__(self, can_edit=True):\n        super().__init__()\n        self.can_edit = can_edit\n        self.setStyleSheet(PAGE_STYLESHEET)\n        layout = QVBoxLayout()\n        layout.setContentsMargins(20, 20, 20, 20)\n        layout.setSpacing(12)\n        # ===== Title =====\n        title = QLabel(\" Payments Management\")",
         "detail": "env.core.payments",
+        "documentation": {}
+    },
+    {
+        "label": "ProfilePage",
+        "kind": 6,
+        "importPath": "env.core.profile",
+        "description": "env.core.profile",
+        "peekOfCode": "class ProfilePage(QWidget):\n    profile_changed = Signal()\n    def __init__(self, current_user=None):\n        super().__init__()\n        self.current_user = current_user\n        self.is_admin = bool(\n            current_user and current_user.get(\"role\", \"\").lower() == \"admin\"\n        )\n        self.setStyleSheet(PAGE_STYLESHEET)\n        root = QVBoxLayout(self)",
+        "detail": "env.core.profile",
         "documentation": {}
     },
     {
@@ -1298,8 +2080,26 @@
         "kind": 6,
         "importPath": "env.core.properties",
         "description": "env.core.properties",
-        "peekOfCode": "class PropertiesPage(QWidget):\n    def __init__(self):\n        super().__init__()\n        self.setStyleSheet(PAGE_STYLESHEET)\n        layout = QVBoxLayout()\n        layout.setContentsMargins(20, 20, 20, 20)\n        layout.setSpacing(12)\n        # ===== Title =====\n        title = QLabel(\"Properties Management\")\n        title.setObjectName(\"pageTitle\")",
+        "peekOfCode": "class PropertiesPage(QWidget):\n    def __init__(self, can_edit=True):\n        super().__init__()\n        self.can_edit = can_edit\n        self.setStyleSheet(PAGE_STYLESHEET)\n        layout = QVBoxLayout()\n        layout.setContentsMargins(20, 20, 20, 20)\n        layout.setSpacing(12)\n        # ===== Title =====\n        title = QLabel(\"Properties Management\")",
         "detail": "env.core.properties",
+        "documentation": {}
+    },
+    {
+        "label": "ReportCard",
+        "kind": 6,
+        "importPath": "env.core.reports",
+        "description": "env.core.reports",
+        "peekOfCode": "class ReportCard(QWidget):\n    def __init__(self, title):\n        super().__init__()\n        self.setObjectName(\"reportCard\")\n        layout = QVBoxLayout(self)\n        layout.setContentsMargins(16, 12, 16, 12)\n        layout.setSpacing(6)\n        heading = QLabel(title)\n        heading.setObjectName(\"reportCardTitle\")\n        self.value = QLabel(\"--\")",
+        "detail": "env.core.reports",
+        "documentation": {}
+    },
+    {
+        "label": "ReportsPage",
+        "kind": 6,
+        "importPath": "env.core.reports",
+        "description": "env.core.reports",
+        "peekOfCode": "class ReportsPage(QWidget):\n    def __init__(self, can_export=True):\n        super().__init__()\n        self.can_export = can_export\n        self.setStyleSheet(\n            PAGE_STYLESHEET\n            + f\"\"\"\n            QWidget#reportCard {{\n                background: {GREEN_100};\n                border: 1px solid {CARD_BORDER};",
+        "detail": "env.core.reports",
         "documentation": {}
     },
     {
@@ -1307,7 +2107,7 @@
         "kind": 6,
         "importPath": "env.core.tenants",
         "description": "env.core.tenants",
-        "peekOfCode": "class TenantsPage(QWidget):\n    def __init__(self):\n        super().__init__()\n        self.setStyleSheet(PAGE_STYLESHEET)\n        layout = QVBoxLayout()\n        layout.setContentsMargins(20, 20, 20, 20)\n        layout.setSpacing(12)\n        # ===== Title =====\n        title = QLabel(\"Tenants Management\")\n        title.setObjectName(\"pageTitle\")",
+        "peekOfCode": "class TenantsPage(QWidget):\n    def __init__(self, can_edit=True):\n        super().__init__()\n        self.can_edit = can_edit\n        self.setStyleSheet(PAGE_STYLESHEET)\n        layout = QVBoxLayout()\n        layout.setContentsMargins(20, 20, 20, 20)\n        layout.setSpacing(12)\n        # ===== Title =====\n        title = QLabel(\"Tenants Management\")",
         "detail": "env.core.tenants",
         "documentation": {}
     },
@@ -1316,7 +2116,7 @@
         "kind": 6,
         "importPath": "env.core.units",
         "description": "env.core.units",
-        "peekOfCode": "class UnitsPage(QWidget):\n    def __init__(self):\n        super().__init__()\n        self.setStyleSheet(PAGE_STYLESHEET)\n        layout = QVBoxLayout()\n        layout.setContentsMargins(20, 20, 20, 20)\n        layout.setSpacing(12)\n        # ===== Title =====\n        title = QLabel(\" Units Management\")\n        title.setObjectName(\"pageTitle\")",
+        "peekOfCode": "class UnitsPage(QWidget):\n    def __init__(self, can_edit=True):\n        super().__init__()\n        self.can_edit = can_edit\n        self.setStyleSheet(PAGE_STYLESHEET)\n        layout = QVBoxLayout()\n        layout.setContentsMargins(20, 20, 20, 20)\n        layout.setSpacing(12)\n        # ===== Title =====\n        title = QLabel(\" Units Management\")",
         "detail": "env.core.units",
         "documentation": {}
     },
@@ -1613,7 +2413,151 @@
         "kind": 2,
         "importPath": "env.database.db",
         "description": "env.database.db",
-        "peekOfCode": "def get_current_month_key():\n    return date.today().strftime(\"%Y-%m\")",
+        "peekOfCode": "def get_current_month_key():\n    return date.today().strftime(\"%Y-%m\")\n# ===== USER PROFILE OPERATIONS =====\ndef get_user_profiles():\n    conn = get_connection()\n    cursor = conn.cursor()\n    cursor.execute(\n        \"\"\"\n        SELECT id, full_name, email, phone, role, bio, is_active\n        FROM user_profiles",
+        "detail": "env.database.db",
+        "documentation": {}
+    },
+    {
+        "label": "get_user_profiles",
+        "kind": 2,
+        "importPath": "env.database.db",
+        "description": "env.database.db",
+        "peekOfCode": "def get_user_profiles():\n    conn = get_connection()\n    cursor = conn.cursor()\n    cursor.execute(\n        \"\"\"\n        SELECT id, full_name, email, phone, role, bio, is_active\n        FROM user_profiles\n        ORDER BY full_name ASC\n        \"\"\"\n    )",
+        "detail": "env.database.db",
+        "documentation": {}
+    },
+    {
+        "label": "add_user_profile",
+        "kind": 2,
+        "importPath": "env.database.db",
+        "description": "env.database.db",
+        "peekOfCode": "def add_user_profile(full_name, email, phone, role, bio, is_active=False):\n    conn = get_connection()\n    cursor = conn.cursor()\n    if is_active:\n        cursor.execute(\"UPDATE user_profiles SET is_active = 0\")\n    cursor.execute(\n        \"\"\"\n        INSERT INTO user_profiles\n            (full_name, email, phone, role, bio, is_active)\n        VALUES (?, ?, ?, ?, ?, ?)",
+        "detail": "env.database.db",
+        "documentation": {}
+    },
+    {
+        "label": "update_user_profile",
+        "kind": 2,
+        "importPath": "env.database.db",
+        "description": "env.database.db",
+        "peekOfCode": "def update_user_profile(profile_id, full_name, email, phone, role, bio, is_active=False):\n    conn = get_connection()\n    cursor = conn.cursor()\n    if is_active:\n        cursor.execute(\"UPDATE user_profiles SET is_active = 0\")\n    cursor.execute(\n        \"\"\"\n        UPDATE user_profiles\n        SET full_name=?, email=?, phone=?, role=?, bio=?, is_active=?\n        WHERE id=?",
+        "detail": "env.database.db",
+        "documentation": {}
+    },
+    {
+        "label": "delete_user_profile",
+        "kind": 2,
+        "importPath": "env.database.db",
+        "description": "env.database.db",
+        "peekOfCode": "def delete_user_profile(profile_id):\n    conn = get_connection()\n    cursor = conn.cursor()\n    cursor.execute(\"SELECT is_active FROM user_profiles WHERE id=?\", (profile_id,))\n    row = cursor.fetchone()\n    was_active = bool(row and row[0])\n    cursor.execute(\"DELETE FROM user_profiles WHERE id=?\", (profile_id,))\n    if was_active:\n        cursor.execute(\n            \"\"\"",
+        "detail": "env.database.db",
+        "documentation": {}
+    },
+    {
+        "label": "set_active_user_profile",
+        "kind": 2,
+        "importPath": "env.database.db",
+        "description": "env.database.db",
+        "peekOfCode": "def set_active_user_profile(profile_id):\n    conn = get_connection()\n    cursor = conn.cursor()\n    cursor.execute(\"UPDATE user_profiles SET is_active = 0\")\n    cursor.execute(\"UPDATE user_profiles SET is_active = 1 WHERE id=?\", (profile_id,))\n    conn.commit()\n    conn.close()\ndef get_active_user_profile():\n    conn = get_connection()\n    cursor = conn.cursor()",
+        "detail": "env.database.db",
+        "documentation": {}
+    },
+    {
+        "label": "get_active_user_profile",
+        "kind": 2,
+        "importPath": "env.database.db",
+        "description": "env.database.db",
+        "peekOfCode": "def get_active_user_profile():\n    conn = get_connection()\n    cursor = conn.cursor()\n    cursor.execute(\n        \"\"\"\n        SELECT id, full_name, email, phone, role, bio\n        FROM user_profiles\n        WHERE is_active = 1\n        LIMIT 1\n        \"\"\"",
+        "detail": "env.database.db",
+        "documentation": {}
+    },
+    {
+        "label": "get_monthly_income_report",
+        "kind": 2,
+        "importPath": "env.database.db",
+        "description": "env.database.db",
+        "peekOfCode": "def get_monthly_income_report(limit=6):\n    conn = get_connection()\n    cursor = conn.cursor()\n    cursor.execute(\n        \"\"\"\n        SELECT month_key, total\n        FROM (\n            SELECT\n                COALESCE(NULLIF(month_covered, ''), substr(payment_date, 1, 7)) AS month_key,\n                COALESCE(SUM(amount), 0) AS total",
+        "detail": "env.database.db",
+        "documentation": {}
+    },
+    {
+        "label": "get_property_occupancy_report",
+        "kind": 2,
+        "importPath": "env.database.db",
+        "description": "env.database.db",
+        "peekOfCode": "def get_property_occupancy_report():\n    conn = get_connection()\n    cursor = conn.cursor()\n    cursor.execute(\n        \"\"\"\n        SELECT\n            properties.name,\n            COALESCE(SUM(CASE WHEN units.status = 'Occupied' THEN 1 ELSE 0 END), 0) AS occupied,\n            COALESCE(SUM(CASE WHEN units.status = 'Vacant' THEN 1 ELSE 0 END), 0) AS vacant,\n            COUNT(units.id) AS total_units",
+        "detail": "env.database.db",
+        "documentation": {}
+    },
+    {
+        "label": "get_tenant_arrears_report",
+        "kind": 2,
+        "importPath": "env.database.db",
+        "description": "env.database.db",
+        "peekOfCode": "def get_tenant_arrears_report(limit=12):\n    conn = get_connection()\n    cursor = conn.cursor()\n    cursor.execute(\n        \"\"\"\n        SELECT\n            tenants.name,\n            COALESCE(units.unit_number, '-') AS unit_number,\n            COALESCE(units.rent_amount, 0) AS rent_amount,\n            COALESCE(SUM(payments.amount), 0) AS paid_amount,",
+        "detail": "env.database.db",
+        "documentation": {}
+    },
+    {
+        "label": "create_auth_user",
+        "kind": 2,
+        "importPath": "env.database.db",
+        "description": "env.database.db",
+        "peekOfCode": "def create_auth_user(full_name, username, email, password_hash, password_salt, role):\n    conn = get_connection()\n    cursor = conn.cursor()\n    cursor.execute(\n        \"\"\"\n        INSERT INTO auth_users\n            (full_name, username, email, password_hash, password_salt, role)\n        VALUES (?, ?, ?, ?, ?, ?)\n        \"\"\",\n        (full_name, username, email, password_hash, password_salt, role),",
+        "detail": "env.database.db",
+        "documentation": {}
+    },
+    {
+        "label": "get_auth_user_by_identifier",
+        "kind": 2,
+        "importPath": "env.database.db",
+        "description": "env.database.db",
+        "peekOfCode": "def get_auth_user_by_identifier(identifier):\n    conn = get_connection()\n    cursor = conn.cursor()\n    cursor.execute(\n        \"\"\"\n        SELECT id, full_name, username, email, password_hash, password_salt, role, is_enabled\n        FROM auth_users\n        WHERE lower(username) = lower(?) OR lower(email) = lower(?)\n        LIMIT 1\n        \"\"\",",
+        "detail": "env.database.db",
+        "documentation": {}
+    },
+    {
+        "label": "get_auth_user_by_id",
+        "kind": 2,
+        "importPath": "env.database.db",
+        "description": "env.database.db",
+        "peekOfCode": "def get_auth_user_by_id(user_id):\n    conn = get_connection()\n    cursor = conn.cursor()\n    cursor.execute(\n        \"\"\"\n        SELECT id, full_name, username, email, role, is_enabled\n        FROM auth_users\n        WHERE id = ?\n        LIMIT 1\n        \"\"\",",
+        "detail": "env.database.db",
+        "documentation": {}
+    },
+    {
+        "label": "update_auth_user_self",
+        "kind": 2,
+        "importPath": "env.database.db",
+        "description": "env.database.db",
+        "peekOfCode": "def update_auth_user_self(user_id, full_name, email):\n    conn = get_connection()\n    cursor = conn.cursor()\n    cursor.execute(\n        \"\"\"\n        UPDATE auth_users\n        SET full_name = ?, email = ?\n        WHERE id = ?\n        \"\"\",\n        (full_name, email, user_id),",
+        "detail": "env.database.db",
+        "documentation": {}
+    },
+    {
+        "label": "update_auth_last_login",
+        "kind": 2,
+        "importPath": "env.database.db",
+        "description": "env.database.db",
+        "peekOfCode": "def update_auth_last_login(user_id):\n    conn = get_connection()\n    cursor = conn.cursor()\n    cursor.execute(\n        \"UPDATE auth_users SET last_login = datetime('now') WHERE id = ?\",\n        (user_id,),\n    )\n    conn.commit()\n    conn.close()\ndef create_auth_session(user_id):",
+        "detail": "env.database.db",
+        "documentation": {}
+    },
+    {
+        "label": "create_auth_session",
+        "kind": 2,
+        "importPath": "env.database.db",
+        "description": "env.database.db",
+        "peekOfCode": "def create_auth_session(user_id):\n    conn = get_connection()\n    cursor = conn.cursor()\n    cursor.execute(\n        \"INSERT INTO auth_sessions (user_id) VALUES (?)\",\n        (user_id,),\n    )\n    conn.commit()\n    session_id = cursor.lastrowid\n    conn.close()",
+        "detail": "env.database.db",
+        "documentation": {}
+    },
+    {
+        "label": "close_auth_session",
+        "kind": 2,
+        "importPath": "env.database.db",
+        "description": "env.database.db",
+        "peekOfCode": "def close_auth_session(session_id):\n    conn = get_connection()\n    cursor = conn.cursor()\n    cursor.execute(\n        \"\"\"\n        UPDATE auth_sessions\n        SET logout_at = datetime('now'), is_active = 0\n        WHERE id = ?\n        \"\"\",\n        (session_id,),",
         "detail": "env.database.db",
         "documentation": {}
     },
@@ -1640,7 +2584,7 @@
         "kind": 6,
         "importPath": "env.ui.dashboard",
         "description": "env.ui.dashboard",
-        "peekOfCode": "class Dashboard(QWidget):\n    def __init__(self):\n        super().__init__()\n        outer = QVBoxLayout(self)\n        outer.setContentsMargins(0, 0, 0, 0)\n        scroll = QScrollArea()\n        scroll.setWidgetResizable(True)\n        scroll.setStyleSheet(\"border: none; background: transparent;\")\n        content = QWidget()\n        root = QVBoxLayout(content)",
+        "peekOfCode": "class Dashboard(QWidget):\n    def __init__(self):\n        super().__init__()\n        outer = QVBoxLayout(self)\n        outer.setContentsMargins(0, 0, 0, 0)\n        scroll = QScrollArea()\n        scroll.setWidgetResizable(True)\n        scroll.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)\n        scroll.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)\n        scroll.setStyleSheet(\"border: none; background: transparent;\")",
         "detail": "env.ui.dashboard",
         "documentation": {}
     },
@@ -1798,11 +2742,83 @@
         "documentation": {}
     },
     {
+        "label": "normalize_role",
+        "kind": 2,
+        "importPath": "env.utils.permissions",
+        "description": "env.utils.permissions",
+        "peekOfCode": "def normalize_role(role):\n    role_name = (role or \"viewer\").strip().lower()\n    if role_name not in ROLE_PERMISSIONS:\n        return \"viewer\"\n    return role_name\ndef get_permissions_for_role(role):\n    return ROLE_PERMISSIONS[normalize_role(role)]\ndef can_access_page(role, page_key):\n    permissions = get_permissions_for_role(role)\n    return page_key in permissions[\"pages\"]",
+        "detail": "env.utils.permissions",
+        "documentation": {}
+    },
+    {
+        "label": "get_permissions_for_role",
+        "kind": 2,
+        "importPath": "env.utils.permissions",
+        "description": "env.utils.permissions",
+        "peekOfCode": "def get_permissions_for_role(role):\n    return ROLE_PERMISSIONS[normalize_role(role)]\ndef can_access_page(role, page_key):\n    permissions = get_permissions_for_role(role)\n    return page_key in permissions[\"pages\"]",
+        "detail": "env.utils.permissions",
+        "documentation": {}
+    },
+    {
+        "label": "can_access_page",
+        "kind": 2,
+        "importPath": "env.utils.permissions",
+        "description": "env.utils.permissions",
+        "peekOfCode": "def can_access_page(role, page_key):\n    permissions = get_permissions_for_role(role)\n    return page_key in permissions[\"pages\"]",
+        "detail": "env.utils.permissions",
+        "documentation": {}
+    },
+    {
+        "label": "ROLE_PERMISSIONS",
+        "kind": 5,
+        "importPath": "env.utils.permissions",
+        "description": "env.utils.permissions",
+        "peekOfCode": "ROLE_PERMISSIONS = {\n    \"admin\": {\n        \"pages\": {\n            \"dashboard\",\n            \"properties\",\n            \"units\",\n            \"tenants\",\n            \"payments\",\n            \"reports\",\n            \"profile\",",
+        "detail": "env.utils.permissions",
+        "documentation": {}
+    },
+    {
+        "label": "hash_password",
+        "kind": 2,
+        "importPath": "env.utils.security",
+        "description": "env.utils.security",
+        "peekOfCode": "def hash_password(password):\n    salt = os.urandom(16)\n    digest = hashlib.pbkdf2_hmac(\n        \"sha256\",\n        password.encode(\"utf-8\"),\n        salt,\n        PBKDF2_ITERATIONS,\n    )\n    return digest.hex(), salt.hex()\ndef verify_password(password, password_hash, password_salt):",
+        "detail": "env.utils.security",
+        "documentation": {}
+    },
+    {
+        "label": "verify_password",
+        "kind": 2,
+        "importPath": "env.utils.security",
+        "description": "env.utils.security",
+        "peekOfCode": "def verify_password(password, password_hash, password_salt):\n    derived = hashlib.pbkdf2_hmac(\n        \"sha256\",\n        password.encode(\"utf-8\"),\n        bytes.fromhex(password_salt),\n        PBKDF2_ITERATIONS,\n    )\n    return hmac.compare_digest(derived.hex(), password_hash)",
+        "detail": "env.utils.security",
+        "documentation": {}
+    },
+    {
+        "label": "PBKDF2_ITERATIONS",
+        "kind": 5,
+        "importPath": "env.utils.security",
+        "description": "env.utils.security",
+        "peekOfCode": "PBKDF2_ITERATIONS = 240000\ndef hash_password(password):\n    salt = os.urandom(16)\n    digest = hashlib.pbkdf2_hmac(\n        \"sha256\",\n        password.encode(\"utf-8\"),\n        salt,\n        PBKDF2_ITERATIONS,\n    )\n    return digest.hex(), salt.hex()",
+        "detail": "env.utils.security",
+        "documentation": {}
+    },
+    {
+        "label": "SessionManager",
+        "kind": 6,
+        "importPath": "env.utils.session",
+        "description": "env.utils.session",
+        "peekOfCode": "class SessionManager:\n    def __init__(self):\n        self.current_user = None\n        self.current_session_id = None\n    def login(self, user_data):\n        user_id = user_data[\"id\"]\n        update_auth_last_login(user_id)\n        self.current_session_id = create_auth_session(user_id)\n        self.current_user = user_data\n    def logout(self):",
+        "detail": "env.utils.session",
+        "documentation": {}
+    },
+    {
         "label": "MainWindow",
         "kind": 6,
         "importPath": "env.main",
         "description": "env.main",
-        "peekOfCode": "class MainWindow(QMainWindow):\n    def __init__(self):\n        super().__init__()\n        self.setWindowTitle(\"Rent Management System\")\n        self.resize(1180, 760)\n        self.setStyleSheet(MAIN_WINDOW_STYLE)\n        main_widget = QWidget()\n        main_layout = QHBoxLayout()\n        main_layout.setContentsMargins(14, 14, 14, 14)\n        main_layout.setSpacing(12)",
+        "peekOfCode": "class MainWindow(QMainWindow):\n    def __init__(self, session_manager, on_logout=None):\n        super().__init__()\n        self.session_manager = session_manager\n        self.on_logout = on_logout\n        self._logout_in_progress = False\n        self.current_role = normalize_role(self.session_manager.current_user.get(\"role\"))\n        self.permissions = get_permissions_for_role(self.current_role)\n        self.setWindowTitle(\"Rent Management System\")\n        self.resize(1180, 760)",
         "detail": "env.main",
         "documentation": {}
     }

@@ -124,6 +124,65 @@ def initialize_database():
         )
         """
     )
+    cursor.execute(
+        """
+        CREATE TABLE IF NOT EXISTS user_profiles (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            full_name TEXT NOT NULL,
+            email TEXT UNIQUE,
+            phone TEXT,
+            role TEXT,
+            bio TEXT,
+            is_active INTEGER NOT NULL DEFAULT 0,
+            created_at TEXT NOT NULL DEFAULT (datetime('now'))
+        )
+        """
+    )
+    cursor.execute("SELECT COUNT(*) FROM user_profiles")
+    profile_count = cursor.fetchone()[0]
+    if profile_count == 0:
+        cursor.execute(
+            """
+            INSERT INTO user_profiles
+                (full_name, email, phone, role, bio, is_active)
+            VALUES (?, ?, ?, ?, ?, 1)
+            """,
+            (
+                "Administrator",
+                "admin@rento.local",
+                "",
+                "System Admin",
+                "Default system profile",
+            ),
+        )
+    cursor.execute(
+        """
+        CREATE TABLE IF NOT EXISTS auth_users (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            full_name TEXT NOT NULL,
+            username TEXT NOT NULL UNIQUE,
+            email TEXT NOT NULL UNIQUE,
+            password_hash TEXT NOT NULL,
+            password_salt TEXT NOT NULL,
+            role TEXT NOT NULL DEFAULT 'manager',
+            is_enabled INTEGER NOT NULL DEFAULT 1,
+            last_login TEXT,
+            created_at TEXT NOT NULL DEFAULT (datetime('now'))
+        )
+        """
+    )
+    cursor.execute(
+        """
+        CREATE TABLE IF NOT EXISTS auth_sessions (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            user_id INTEGER NOT NULL,
+            login_at TEXT NOT NULL DEFAULT (datetime('now')),
+            logout_at TEXT,
+            is_active INTEGER NOT NULL DEFAULT 1,
+            FOREIGN KEY(user_id) REFERENCES auth_users(id)
+        )
+        """
+    )
     conn.commit()
     conn.close()
 
@@ -578,3 +637,289 @@ def get_dashboard_monthly_snapshot(month_key):
 
 def get_current_month_key():
     return date.today().strftime("%Y-%m")
+
+
+# ===== USER PROFILE OPERATIONS =====
+
+def get_user_profiles():
+    conn = get_connection()
+    cursor = conn.cursor()
+    cursor.execute(
+        """
+        SELECT id, full_name, email, phone, role, bio, is_active
+        FROM user_profiles
+        ORDER BY full_name ASC
+        """
+    )
+    data = cursor.fetchall()
+    conn.close()
+    return data
+
+
+def add_user_profile(full_name, email, phone, role, bio, is_active=False):
+    conn = get_connection()
+    cursor = conn.cursor()
+
+    if is_active:
+        cursor.execute("UPDATE user_profiles SET is_active = 0")
+
+    cursor.execute(
+        """
+        INSERT INTO user_profiles
+            (full_name, email, phone, role, bio, is_active)
+        VALUES (?, ?, ?, ?, ?, ?)
+        """,
+        (full_name, email, phone, role, bio, 1 if is_active else 0),
+    )
+    conn.commit()
+    conn.close()
+
+
+def update_user_profile(profile_id, full_name, email, phone, role, bio, is_active=False):
+    conn = get_connection()
+    cursor = conn.cursor()
+
+    if is_active:
+        cursor.execute("UPDATE user_profiles SET is_active = 0")
+
+    cursor.execute(
+        """
+        UPDATE user_profiles
+        SET full_name=?, email=?, phone=?, role=?, bio=?, is_active=?
+        WHERE id=?
+        """,
+        (full_name, email, phone, role, bio, 1 if is_active else 0, profile_id),
+    )
+    conn.commit()
+    conn.close()
+
+
+def delete_user_profile(profile_id):
+    conn = get_connection()
+    cursor = conn.cursor()
+
+    cursor.execute("SELECT is_active FROM user_profiles WHERE id=?", (profile_id,))
+    row = cursor.fetchone()
+    was_active = bool(row and row[0])
+
+    cursor.execute("DELETE FROM user_profiles WHERE id=?", (profile_id,))
+
+    if was_active:
+        cursor.execute(
+            """
+            UPDATE user_profiles
+            SET is_active = 1
+            WHERE id = (
+                SELECT id FROM user_profiles
+                ORDER BY created_at ASC
+                LIMIT 1
+            )
+            """
+        )
+
+    conn.commit()
+    conn.close()
+
+
+def set_active_user_profile(profile_id):
+    conn = get_connection()
+    cursor = conn.cursor()
+    cursor.execute("UPDATE user_profiles SET is_active = 0")
+    cursor.execute("UPDATE user_profiles SET is_active = 1 WHERE id=?", (profile_id,))
+    conn.commit()
+    conn.close()
+
+
+def get_active_user_profile():
+    conn = get_connection()
+    cursor = conn.cursor()
+    cursor.execute(
+        """
+        SELECT id, full_name, email, phone, role, bio
+        FROM user_profiles
+        WHERE is_active = 1
+        LIMIT 1
+        """
+    )
+    row = cursor.fetchone()
+    conn.close()
+    return row
+
+
+def get_monthly_income_report(limit=6):
+    conn = get_connection()
+    cursor = conn.cursor()
+    cursor.execute(
+        """
+        SELECT month_key, total
+        FROM (
+            SELECT
+                COALESCE(NULLIF(month_covered, ''), substr(payment_date, 1, 7)) AS month_key,
+                COALESCE(SUM(amount), 0) AS total
+            FROM payments
+            GROUP BY month_key
+        )
+        WHERE month_key IS NOT NULL
+          AND month_key != ''
+        ORDER BY month_key DESC
+        LIMIT ?
+        """,
+        (limit,),
+    )
+    rows = cursor.fetchall()
+    conn.close()
+    rows.reverse()
+    return rows
+
+
+def get_property_occupancy_report():
+    conn = get_connection()
+    cursor = conn.cursor()
+    cursor.execute(
+        """
+        SELECT
+            properties.name,
+            COALESCE(SUM(CASE WHEN units.status = 'Occupied' THEN 1 ELSE 0 END), 0) AS occupied,
+            COALESCE(SUM(CASE WHEN units.status = 'Vacant' THEN 1 ELSE 0 END), 0) AS vacant,
+            COUNT(units.id) AS total_units
+        FROM properties
+        LEFT JOIN units ON units.property_id = properties.id
+        GROUP BY properties.id, properties.name
+        ORDER BY properties.name
+        """
+    )
+    rows = cursor.fetchall()
+    conn.close()
+    return rows
+
+
+def get_tenant_arrears_report(limit=12):
+    conn = get_connection()
+    cursor = conn.cursor()
+    cursor.execute(
+        """
+        SELECT
+            tenants.name,
+            COALESCE(units.unit_number, '-') AS unit_number,
+            COALESCE(units.rent_amount, 0) AS rent_amount,
+            COALESCE(SUM(payments.amount), 0) AS paid_amount,
+            COALESCE(units.rent_amount, 0) - COALESCE(SUM(payments.amount), 0) AS arrears
+        FROM tenants
+        LEFT JOIN units ON tenants.unit_id = units.id
+        LEFT JOIN payments ON payments.tenant_id = tenants.id
+        GROUP BY tenants.id, tenants.name, units.unit_number, units.rent_amount
+        ORDER BY arrears DESC, tenants.name ASC
+        LIMIT ?
+        """,
+        (limit,),
+    )
+    rows = cursor.fetchall()
+    conn.close()
+    return rows
+
+
+# ===== AUTHENTICATION OPERATIONS =====
+
+def create_auth_user(full_name, username, email, password_hash, password_salt, role):
+    conn = get_connection()
+    cursor = conn.cursor()
+    cursor.execute(
+        """
+        INSERT INTO auth_users
+            (full_name, username, email, password_hash, password_salt, role)
+        VALUES (?, ?, ?, ?, ?, ?)
+        """,
+        (full_name, username, email, password_hash, password_salt, role),
+    )
+    conn.commit()
+    user_id = cursor.lastrowid
+    conn.close()
+    return user_id
+
+
+def get_auth_user_by_identifier(identifier):
+    conn = get_connection()
+    cursor = conn.cursor()
+    cursor.execute(
+        """
+        SELECT id, full_name, username, email, password_hash, password_salt, role, is_enabled
+        FROM auth_users
+        WHERE lower(username) = lower(?) OR lower(email) = lower(?)
+        LIMIT 1
+        """,
+        (identifier, identifier),
+    )
+    row = cursor.fetchone()
+    conn.close()
+    return row
+
+
+def get_auth_user_by_id(user_id):
+    conn = get_connection()
+    cursor = conn.cursor()
+    cursor.execute(
+        """
+        SELECT id, full_name, username, email, role, is_enabled
+        FROM auth_users
+        WHERE id = ?
+        LIMIT 1
+        """,
+        (user_id,),
+    )
+    row = cursor.fetchone()
+    conn.close()
+    return row
+
+
+def update_auth_user_self(user_id, full_name, email):
+    conn = get_connection()
+    cursor = conn.cursor()
+    cursor.execute(
+        """
+        UPDATE auth_users
+        SET full_name = ?, email = ?
+        WHERE id = ?
+        """,
+        (full_name, email, user_id),
+    )
+    conn.commit()
+    conn.close()
+
+
+def update_auth_last_login(user_id):
+    conn = get_connection()
+    cursor = conn.cursor()
+    cursor.execute(
+        "UPDATE auth_users SET last_login = datetime('now') WHERE id = ?",
+        (user_id,),
+    )
+    conn.commit()
+    conn.close()
+
+
+def create_auth_session(user_id):
+    conn = get_connection()
+    cursor = conn.cursor()
+    cursor.execute(
+        "INSERT INTO auth_sessions (user_id) VALUES (?)",
+        (user_id,),
+    )
+    conn.commit()
+    session_id = cursor.lastrowid
+    conn.close()
+    return session_id
+
+
+def close_auth_session(session_id):
+    conn = get_connection()
+    cursor = conn.cursor()
+    cursor.execute(
+        """
+        UPDATE auth_sessions
+        SET logout_at = datetime('now'), is_active = 0
+        WHERE id = ?
+        """,
+        (session_id,),
+    )
+    conn.commit()
+    conn.close()

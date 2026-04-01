@@ -20,8 +20,9 @@ from ui.theme import (
 
 
 class UnitsPage(QWidget):
-    def __init__(self):
+    def __init__(self, can_edit=True):
         super().__init__()
+        self.can_edit = can_edit
         self.setStyleSheet(PAGE_STYLESHEET)
 
         layout = QVBoxLayout()
@@ -96,9 +97,27 @@ class UnitsPage(QWidget):
         self.delete_btn.clicked.connect(self.delete_unit)
         self.clear_btn.clicked.connect(self.clear_form)
 
+        if not self.can_edit:
+            self._set_read_only_mode()
+
         self.selected_id = None
 
         self.load_data()
+
+    def _set_read_only_mode(self):
+        self.add_btn.setEnabled(False)
+        self.update_btn.setEnabled(False)
+        self.delete_btn.setEnabled(False)
+        self.property_combo.setEnabled(False)
+        self.unit_input.setReadOnly(True)
+        self.rent_input.setReadOnly(True)
+        self.status_combo.setEnabled(False)
+
+    def _guard_edit(self):
+        if self.can_edit:
+            return True
+        QMessageBox.warning(self, "Access Denied", "You have read-only access")
+        return False
 
     # =============================
     # Load Properties into Combo
@@ -146,6 +165,8 @@ class UnitsPage(QWidget):
     # Add Unit
     # =============================
     def add_unit(self):
+        if not self._guard_edit():
+            return
         property_id = self.property_combo.currentData()
         unit_no = self.unit_input.text()
         rent = self.rent_input.text()
@@ -163,6 +184,8 @@ class UnitsPage(QWidget):
     # Update Unit
     # =============================
     def update_unit(self):
+        if not self._guard_edit():
+            return
         if not self.selected_id:
             QMessageBox.warning(self, "Error", "Select a unit first")
             return
@@ -186,6 +209,8 @@ class UnitsPage(QWidget):
     # Delete Unit
     # =============================
     def delete_unit(self):
+        if not self._guard_edit():
+            return
         if not self.selected_id:
             QMessageBox.warning(self, "Error", "Select a unit first")
             return
